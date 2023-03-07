@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="比邻而坐" />
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<title>比邻而坐</title>
+	</head>
+	<body>
+		<div id="main">
+			<div id="header">
+				<div id="logo">
+					<img src="img/logo.png"  alt="比邻而坐 —— bilinerz.github.io" />
+				</div>
+				<div id="nav">
+					<ul>
+						<li><a href="#">首页</a></li>
+						<li><a href="">传统文化</a></li>
+						<li><a href="">多彩生活</a></li>
+						<li><a href="">热点新闻</a></li>
+						<li><a href="">站长推荐</a></li>
+						<li><a href="">编程笔记</a></li>
+						<li><a href="menu/Music/Music.html" target="_blank">音樂</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="news">
+				<div id="new">
+					<div id="row_1">
+						<div class="inner">
+							<a href="menu/站长推荐/为什么会有人类.html" target="_blank"><img src="img/news/为什么会有人类.jpg" alt="为什么会有人类"></a>
+							<a href="menu/传统文化/寻找高维时空的钥匙①：中华文化密码与时空密码.html" target="_blank"><img src="https://www.tiandiming.com/9981/img/寻找高维时空的钥匙/寻找高维时空的钥匙01.jpg" alt=""></a>
+							<a href="menu/编程笔记/Golang/Golang 对称加密算法.html" target="_blank"><img src="img/news/对称加密算法.png" alt=""></a>
+							<a href="menu/多彩生活/怎样利用“三伏” 转变日日成好日？.html" target="_blank"><img src="https://www.tiandiming.com/9981/img/多彩生活/20200802-01.jpg" alt=""></a>
+							<a href="menu/站长推荐/【分享】自制的纯净Win10PE系统 及制作U盘启动方法.html" target="_blank"><img src="https://www.tiandiming.com/9981/工具/winpe/img/Win10PE桌面界面.png" alt=""></a>
+						</div>
+						<div class="shift">
+							<div class="btn left" onclick="leftShift()">&lt;</div>
+							<div class="btn right" onclick="rightShift()">&gt;</div>
+						</div>
+					</div>
+					<div id="row_2">
+						<div class="slt" onclick="setIndex(0)">
+							<img src="img/news/为什么会有人类.jpg" alt="为什么会有人类">
+						</div>
+						<div class="slt" onclick="setIndex(1)">
+							<img src="https://www.tiandiming.com/9981/img/寻找高维时空的钥匙/寻找高维时空的钥匙01.jpg" alt="">
+						</div>
+						<div class="slt" onclick="setIndex(2)">
+							<img src="img/news/对称加密算法.png" alt="">
+						</div>
+						<div class="slt" onclick="setIndex(3)">
+							<img src="https://www.tiandiming.com/9981/img/多彩生活/20200802-01.jpg" alt="">
+						</div>
+						<div class="slt" onclick="setIndex(4)">
+							<img src="https://www.tiandiming.com/9981/工具/winpe/img/Win10PE桌面界面.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div id="main_tv">
+					<div id="tv">
+						<section id="videoPlayer">
+							<video id="ntdtv" class="video-js vjs-default-skin vjs-big-play-centered" preload="auto" poster="img/ntdtv.jpg">
+								<source id="target" src="https://tv.kanzx.ga/meidong/playlist.m3u8" type="application/x-mpegURL">
+							</video>
+						</section>
+					</div>
+					<div id="tv_menu">
+						<table border="1px" cellspacing="1px" cellpadding="1px">
+							<tr>
+								<td id="meidong">美东台</td>
+								<td id="meixi">美西台</td>
+								<td id="jiadong">加东台</td>
+								<td id="jiaxi">加西台</td>
+							</tr>
+							<tr>
+								<td id="ouzhou">欧洲台</td>
+								<td id="xiushidun">休士顿</td>
+								<td id="yatai">亚太台</td>
+								<td id="zhongguo">中国台</td>
+							</tr>
+						</table>
+					</div>
+					<div id="times"></div>
+				</div>
+			</div>
+			<div id="content">
+				<div class="zy">
+					<div class="sl">
+						<a href="menu/站长推荐/为什么会有人类.html" target="_blank"><img src="img/news/为什么会有人类.jpg" alt=""></a>
+					</div>
+					<div class="jianjie">
+						<p>为什么会有人类，宇宙从生成到末后要经过漫长的成、住、坏、灭四个阶段的过程。宇宙一旦到了最后“灭”的过程中的末后，天体中的一切，包括我们生存的宇宙就将在一瞬间解体无存！一切生命尽灭！</p>
+					</div>
+					<div class="open_btn"><a href="menu/站长推荐/为什么会有人类.html" target="_blank">阅读全文</a></div>
+				</div>
+
+				<div class="zy">
+					<div class="sl">
+						<a href="menu/传统文化/寻找高维时空的钥匙①：中华文化密码与时空密码.html" target="_blank"><img src="https://www.tiandiming.com/9981/img/寻找高维时空的钥匙/寻找高维时空的钥匙01.jpg" alt=""></a>
+					</div>
+					<div class="jianjie">
+						<p>中华文化是一个独立而完美的体系，它完全不同于现代科学体系，它背后通向着一个高维度的神秘世界。但这个处于高维中的神秘世界与我们人类存在的这个现实世界是相连通的，所以它是真实存在的，我们人类是可以开启并进入到这些高维世界......</p>
+					</div>
+					<div class="open_btn"><a href="menu/传统文化/寻找高维时空的钥匙①：中华文化密码与时空密码.html" target="_blank">阅读全文</a></div>
+				</div>
+
+				<div class="zy">
+					<div class="sl">
+						<a href="menu/传统文化/寻找高维时空的钥匙②：地球是一个生命体  神秘的风水阵.html" target="_blank"><img src="https://www.tiandiming.com/9981/img/寻找高维时空的钥匙/02/01.jpg" alt=""></a>
+					</div>
+					<div class="jianjie">
+						<p>说起风水，我们华人都知道。这是中华文化中的一门非常神秘而古老的道家小道学说。有阳宅风水、阴宅风水，比如盖房子、选地基、居家摆设等，这是阳宅风水，风水学中认为这些因素都能够影响到一家人的命运，影响到家人的健康、平安、财运等等。再比如家中老人过世了，为老人选墓地下葬，这是阴宅风水......</p>
+					</div>
+					<div class="open_btn"><a href="menu/传统文化/寻找高维时空的钥匙②：地球是一个生命体  神秘的风水阵.html" target="_blank">阅读全文</a></div>
+				</div>
+
+				<div class="zy">
+					<div class="sl">
+						<a href="menu/传统文化/寻找高维时空的钥匙④：怎样驾驭神秘的能量『炁』 破解人体高维能量之谜.html" target="_blank"><img src="https://www.tiandiming.com/9981/img/寻找高维时空的钥匙/04.jpg" alt=""></a>
+					</div>
+					<div class="jianjie">
+						<p>“气”不是指空气，不是我们这个时空维度之中的能量，所以我们看不见也摸不着。“气”是对另外维度中生命能量的一种统称，它是存在于另外维度中的一种极精微的物质能量体，它其实包含很多不同的物质与种类，比如人体中的气就可分为：元气、宗气、营气、卫气等等。它是驱动生命的原动力......</p>
+					</div>
+					<div class="open_btn"><a href="menu/传统文化/寻找高维时空的钥匙④：怎样驾驭神秘的能量『炁』 破解人体高维能量之谜.html" target="_blank">阅读全文</a></div>
+				</div>
+
+				<div class="zy">
+					<div class="sl">
+						<a href="menu/编程笔记/Golang/Golang 对称加密算法.html" target="_blank"><img src="img/news/对称加密算法.png" alt=""></a>
+					</div>
+					<div class="jianjie">
+						<p>对称加密算法是使用同一个密钥進行加密和解密的方法，常见的对称加密算法有：DES，3DES，AES，RC2，RC4， RC5。下面用golang来实现DES、3DES和AES加密算法......</p>
+					</div>
+					<div class="open_btn"><a href="menu/编程笔记/Golang/Golang 对称加密算法.html" target="_blank">阅读全文</a></div>
+				</div>
+
+				<div class="zy">
+					<div class="sl">
+						<a href="menu/多彩生活/怎样利用“三伏” 转变日日成好日？.html" target="_blank"><img src="https://www.tiandiming.com/9981/img/多彩生活/20200802-01.jpg" alt=""></a>
+					</div>
+					<div class="jianjie">
+						<p>“三伏”是初伏、中伏、末伏（后伏）的合称，也称三伏天。三伏天意指一年中最热的日子。那么三伏是什么时候呢？传统文化中有推算的准则吗？三伏反映什么中华传统文化呢？这炎热盛暑时节有什么好的作用吗？......</p>
+					</div>
+					<div class="open_btn"><a href="menu/多彩生活/怎样利用“三伏” 转变日日成好日？.html" target="_blank">阅读全文</a></div>
+				</div>
+
+				<div class="zy">
+					<div class="sl">
+						<a href="menu/站长推荐/【分享】自制的纯净Win10PE系统 及制作U盘启动方法.html" target="_blank"><img src="https://www.tiandiming.com/9981/工具/winpe/img/Win10PE桌面界面.png" alt=""></a>
+					</div>
+					<div class="jianjie">
+						<p>现在各种U盘启动制作软件有太多广告和各种捆绑软件，只要使用这些PE来装系统就会自动下载安装很多垃圾软件，更可恶的是经常弹出广告窗口，实在是坑人，在这里把我使用的纯净PE系统分享出来，和各位有缘的朋友一起使用......</p>
+					</div>
+					<div class="open_btn"><a href="menu/站长推荐/【分享】自制的纯净Win10PE系统 及制作U盘启动方法.html" target="_blank">阅读全文</a></div>
+				</div>
+
+			</div>
+			<div id="footer">
+				<p>©Copyright 2023 <a href="https://bilinerz.github.io">比邻而坐</a> All right reserved.</p>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/main.js"></script>
+<link href="css/video-js.css" rel="stylesheet" />
+<script src="js/video.js"></script>
+<script src="js/videojs-contrib-hls.js"></script>
+<script type="text/javascript">
+	var player = videojs('ntdtv', {
+		"poster": "",
+		"controls": "true"
+	}, function() {
+		this.on('play', function() {
+			console.log('正在播放');
+		});
+		//暂停--播放完毕后也会暂停
+		this.on('pause', function() {
+			console.log("暂停中")
+		});
+		// 结束
+		this.on('ended', function() {
+			console.log('结束');
+		})
+	});
+	
+	var meidong_src = 'https://tv.kanzx.ga/meidong/playlist.m3u8',
+		meixi_src = 'https://tv.kanzx.ga/meixi/playlist.m3u8',
+		ouzhou_src = 'https://tv.kanzx.ga/ouzhou/playlist.m3u8',
+		jiadong_src = 'https://tv.kanzx.ga/jiadong/playlist.m3u8',
+		jiaxi_src = 'https://tv.kanzx.ga/jiaxi/playlist.m3u8',
+		xiushidun_src = 'https://tv.kanzx.ga/xiushidun/playlist.m3u8',
+		yatai_src = 'https://tv.kanzx.ga/yatai/playlist.m3u8',
+		zhongguo_src = 'https://tv.kanzx.ga/zhongguo/playlist.m3u8';
+	
+	var changeVideo = function (vdoSrc) {
+		if (/\.m3u8$/.test(vdoSrc)) { //判断视频源是否是m3u8的格式
+			player.src({
+				src: vdoSrc,
+				type: 'application/x-mpegURL' //在重新添加视频源的时候需要给新的type的值
+			})
+		} else {
+			player.src(vdoSrc)
+		}
+		player.load();
+		player.play();
+	}
+	document.querySelector('#meidong').addEventListener('click', function () {
+	    changeVideo(meidong_src);
+	});
+	document.querySelector('#meixi').addEventListener('click', function () {
+	    changeVideo(meixi_src);
+	});
+	document.querySelector('#ouzhou').addEventListener('click', function () {
+	    changeVideo(ouzhou_src);
+	});
+	document.querySelector('#jiadong').addEventListener('click', function () {
+	    changeVideo(jiadong_src);
+	});
+	document.querySelector('#jiaxi').addEventListener('click', function () {
+	    changeVideo(jiaxi_src);
+	});
+	document.querySelector('#xiushidun').addEventListener('click', function () {
+	    changeVideo(xiushidun_src);
+	});
+	document.querySelector('#yatai').addEventListener('click', function () {
+	    changeVideo(yatai_src);
+	});
+	document.querySelector('#zhongguo').addEventListener('click', function () {
+	    changeVideo(zhongguo_src);
+	});
+</script>
+<script src="js/myajax.js"></script>
+<!-- <script type="text/javascript">
+	setTimeout(function(){
+		myAjax({
+			type:'get',
+			url:'https://tv.kanzx.ga/fangke/fangke.php',
+			data:{
+				url:'kanzx.github.io',
+				info:1
+			},
+			success:function(data){
+				console.log(data);
+			}
+		});
+	}, 10000);
+</script> -->

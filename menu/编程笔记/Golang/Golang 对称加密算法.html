@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="比邻而坐" />
+		<link rel="shortcut icon" href="../../../img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../../../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/newscss.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/prettify.css">
+        <script src="../../../js/prettify.js"></script>
+		<title>Golang 对称加密算法 —— 比邻而坐</title>
+	</head>
+	<body onload="prettyPrint()">
+		<div id="main">
+			<div id="header">
+				<div id="logo">
+					<img src="../../../img/logo.png"  alt="比邻而坐 —— bilinerz.github.io" />
+				</div>
+				<div id="nav">
+					<ul>
+						<li><a href="../../../index.html">首页</a></li>
+						<li><a href="">传统文化</a></li>
+						<li><a href="">多彩生活</a></li>
+						<li><a href="">热点新闻</a></li>
+						<li><a href="">站长推荐</a></li>
+						<li><a href="">编程笔记</a></li>
+						<li><a href="../../../menu/Music/Music.html" target="_blank">音樂</a></li>
+					</ul>
+				</div>
+			</div>
+            <div class="content">
+                <h2>Golang 对称加密算法</h2>
+                <div class="date">时间：2022-10-21 | 分类：编程笔记>Golang</div>
+                <hr>
+                <div class="main_img"><img src="../../../img/news/对称加密算法.png" alt=""></div>
+                <p>对称加密算法是使用同一个密钥進行加密和解密的方法，常见的对称加密算法有：DES，3DES，AES，RC2，RC4， RC5。下面用golang来实现DES、3DES和AES加密算法。</p>
+<pre class="prettyprint linenums">
+package main
+
+import (
+    "bytes"
+    "crypto/aes"
+    "crypto/cipher"
+    "crypto/des"
+    "encoding/base64"
+    "errors"
+    "fmt"
+)
+
+func main()  {
+    //DES密钥 8个字节
+    key := "12345678"
+    //3DES密钥 24个字节
+    //key = "abcdefig12345678gifedcba"
+    //AES密钥，key长度：16、24、32 bytes 对应 AES-128、AES-192、AES-256
+    //key = "abcdefig12345678"
+
+    keyBytes := []byte(key)
+
+    strBytes := []byte("要加密的内容")
+
+    fmt.Println("原数据：", strBytes)
+
+    //进行加密
+    cipherArr, err := SCEncrypt(strBytes, keyBytes, "DES")
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    fmt.Println("加密后的数据：", cipherArr)
+
+    oringinalBytes, err := SCDecrypt(cipherArr, keyBytes, "DES")
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    fmt.Println("解密后的数据：", oringinalBytes)
+
+    fmt.Println("\n==========字符串方式加解密")
+    str := "要加密的内容2"
+    fmt.Println("原始数据：", str)
+    cipherText, err := SCEncryptString(str, key, "DES")
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    fmt.Println("加密后的数据:", cipherText)
+
+    oringinalText, err := SCDecryptString(cipherText, key, "DES")
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    fmt.Println("解密后的数据:", oringinalText)
+}
+
+//对称加密算法 (原数据, 密钥, 加密类型)
+func SCEncrypt(oringinalBytes, key []byte, scType string) ([]byte, error) {
+    //1、实例化一个密码器block数据类型，(参数为密钥)
+    var err error
+    var block cipher.Block
+
+    switch scType {
+    case "DES":
+        block, err = des.NewCipher(key)
+    case "3DES":
+        block, err = des.NewTripleDESCipher(key)
+    case "AES":
+        block, err = aes.NewCipher(key)
+    }
+
+    if err != nil {
+        return nil, errors.New(fmt.Sprintf("密码器创建失败：%s", err))
+    }
+    //要填充的区块个数
+    blockSize := block.BlockSize()
+
+    //2、对明文填充（参数为原始字节和密码对象的区块个数）
+    paddingBytes := PKCS5Pading(oringinalBytes, blockSize)
+    fmt.Println("填充后的字节：", paddingBytes)
+
+    //3、实例化CBC加密模式（参数为密码器和密钥）
+    blockMode := cipher.NewCBCEncrypter(block, key[:blockSize])
+    fmt.Println("加密模式：", blockMode)
+
+    //4、对填充后的明文字节加密（参数为加密字节和填充字节）
+    cipherBytes := make([]byte, len(paddingBytes)) //用于接收加密后的字节
+    blockMode.CryptBlocks(cipherBytes, paddingBytes)
+
+    return cipherBytes, nil
+}
+
+//对称解密 (加密数据, 密钥, 加密类型)
+func SCDecrypt(cipherBytes, key []byte, scType string) ([]byte, error) {
+    //1、实例化一个密码器block数据类型，(参数为密钥)
+    var err error
+    var block cipher.Block
+
+    switch scType {
+    case "DES":
+        block, err = des.NewCipher(key)
+    case "3DES":
+        block, err = des.NewTripleDESCipher(key)
+    case "AES":
+        block, err = aes.NewCipher(key)
+    }
+
+    if err != nil {
+        return nil, errors.New(fmt.Sprintf("密码器创建失败：%s", err))
+    }
+    //要填充的区块个数
+    blockSize := block.BlockSize()
+
+    //2、实例化CBC解密模式（参数为密码器和密钥）
+    blockMode := cipher.NewCBCDecrypter(block, key[:blockSize])
+    fmt.Println("解密模式：", blockMode)
+
+    //3、对加密数据进行解密（参数为加密字节和填充字节）
+    paddingBytes := make([]byte, len(cipherBytes)) //用于接收解密后的字节
+    blockMode.CryptBlocks(paddingBytes, cipherBytes)
+
+    //4、去除填充的字节后获取到原数据
+    originalBytes := PKCS5UnPading(paddingBytes)
+
+    return originalBytes, nil
+}
+
+//字符串方式加密
+func SCEncryptString(originalText, key, scType string) (string, error) {
+    cipherBytes, err := SCEncrypt([]byte(originalText), []byte(key), scType)
+    if err != nil {
+        return "", nil
+    }
+    //把加密后的数据用base64编码为字符串
+    base64str := base64.StdEncoding.EncodeToString(cipherBytes)
+    return base64str, nil
+}
+
+//字符串方式解密
+func SCDecryptString(cipherText, key, scType string) (string, error) {
+    cipherBytes, _ := base64.StdEncoding.DecodeString(cipherText)
+    cipherBytes, err := SCDecrypt(cipherBytes, []byte(key), scType)
+    if err != nil {
+        return "", nil
+    }
+
+    return string(cipherBytes), nil
+}
+
+//填充字节函数
+//数字填充方式
+func PKCS5Pading(data []byte, blockSize int) []byte {
+    //填充内容 根据bolckSize的大小减去原始数据长度取余数
+    pading := blockSize - len(data)%blockSize
+    fmt.Println("要填充的字节：", pading)
+
+    //将pading转换为数组
+    arr1 := []byte{byte(pading)}
+    //要填充pading的个数
+    arr2 := bytes.Repeat(arr1, pading)
+
+    //返回填充后的数组
+    return append(data, arr2...)
+}
+
+//零位填充
+func ZerosPading(data []byte, blockSize int) []byte {
+    //填充内容 根据bolckSize的大小减去原始数据长度取余数
+    pading := blockSize - len(data)%blockSize
+    fmt.Printf("要填充%d个0\n", pading)
+
+    //填充0的数组
+    arr := bytes.Repeat([]byte{0}, pading)
+
+    //返回填充后的数组
+    return append(data, arr...)
+}
+
+//去除填充字节函数
+//去除数字填充
+func PKCS5UnPading(data []byte) []byte {
+    //获取最后一个元素，也就是要去除的数量
+    unPading := data[len(data)-1]
+
+    //去除填充后的数组
+    result := data[:(len(data) - int(unPading))]
+
+    return result
+}
+
+//去除零位填充
+func ZerosUnPadding(data []byte) []byte {
+    //把右侧的部分全部截取掉
+    return bytes.TrimRightFunc(data, func(r rune) bool {
+        return r == 0
+    })
+}
+</pre>
+            </div>
+            <div id="footer">
+				<p>©Copyright 2023 <a href="https://bilinerz.github.io">比邻而坐</a> All right reserved.</p>
+			</div>
+        </div>
+    </body>
+</html>
