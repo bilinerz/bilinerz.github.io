@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>访问量</title>
+	</head>
+	<body>
+		<p>
+			<span id="url"></span> 访问量：<span id="shuliang"></span>
+		</p>
+	</body>
+</html>
+<script src="js/myajax.js"></script>
+<script type="text/javascript">
+	setTimeout(function(){
+		myAjax({
+			type:'get',
+			url:'https://tv.kanzx.ga/fangke/fangke.php',
+			data:{
+				url:'bilinerz.github.io',
+				info:0
+			},
+			success:function(data){
+				console.log(data);
+				document.getElementById('url').innerHTML=data.url;
+				document.getElementById('shuliang').innerHTML=data.shuliang;
+			}
+		});
+	}, 200);
+</script>
