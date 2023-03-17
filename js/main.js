@@ -19,15 +19,16 @@ function zy_img(){
 	var sl_img = document.getElementsByClassName("sl_img");
 
     for (var i = 0; i <= sl_img.length; i++) {
-        var random_bg = Math.floor(Math.random() * 36);
-        sl_img[i].src = "./img/imgzy/" +random_bg + ".jpg";
+        var random_img = Math.floor(Math.random() * 39);
+        sl_img[i].src = "./img/imgzy/" + random_img + ".jpg";
     }
 }
 
 window.onload = function (){
-    get_day()
-    zy_img()
+    get_day();
+    zy_img();
 }
+
 
 
 //显示的轮播图片下标

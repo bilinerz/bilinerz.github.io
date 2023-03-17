@@ -206,15 +206,37 @@ body{
 	border-radius: 8px;
 }
 
+.zy_title{
+	float: left;
+	padding: 5px 0 0 10px;
+}
+.zy_title a{text-decoration:none;color: black;}
+
+
 .jianjie{
 	width: 600px;
 	float: left;
-	padding: 15px 0 0 10px;
+	padding: 5px 0 0 10px;
+	font-size: 14px;
 }
 
 .open_btn{
 	float: left;
-	margin-top: 65px;
+	margin-top: 45px;
+}
+
+.page_main{
+	margin-top: 15px;
+	text-align: center;
+}
+.page_main p{
+	margin-top: 10px;
+}
+.page_main a{
+	padding: 8px;
+}
+.page_main a:hover{
+	border: blue solid 1px;
 }
 
 #footer{
