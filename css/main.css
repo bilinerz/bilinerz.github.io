@@ -137,6 +137,7 @@ body{
 	width: 109px;
 	height: 54px;
 	padding: 3px;
+	position: relative;
 }
 .slt img {
 	width: 100%;
@@ -149,6 +150,20 @@ body{
 .slt>img:hover{
 	transform: scale(1.5);/*放大1赔*/
 	transition: transform 1s;/*过度时间*/
+}
+
+.slt_title{
+	width: 100%;
+	font-size: 12px;
+	color: wheat;
+	text-align: center;
+	overflow: hidden;
+	background-color: rgba(34, 33, 33, 0.8);
+	position: absolute;
+	bottom: 0;
+}
+.slt_title:hover{
+	
 }
 
 #row_1:hover .shift .btn {

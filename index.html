@@ -5,10 +5,8 @@
 		<meta name="author" content="比邻而坐" />
 		<link rel="shortcut icon" href="img/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<script src="js/main.js"></script>
 		<link href="css/video-js.css" rel="stylesheet" />
-		<script src="js/video.js"></script>
-		<script src="js/videojs-contrib-hls.js"></script>
+		<script src="js/main.js"></script>
 		<title>比邻而坐</title>
 	</head>
 	<body>
@@ -46,18 +44,23 @@
 					</div>
 					<div id="row_2">
 						<div class="slt" onclick="setIndex(0)">
+							<div class="slt_title">为什么会有人类</div>
 							<img src="img/news/为什么会有人类.jpg" alt="为什么会有人类">
 						</div>
 						<div class="slt" onclick="setIndex(1)">
+							<div class="slt_title">寻找高维时空的钥匙</div>
 							<img src="https://www.tiandiming.com/9981/img/寻找高维时空的钥匙/寻找高维时空的钥匙01.jpg" alt="">
 						</div>
 						<div class="slt" onclick="setIndex(2)">
+							<div class="slt_title">golang对称加密算法</div>
 							<img src="img/news/对称加密算法.png" alt="">
 						</div>
 						<div class="slt" onclick="setIndex(3)">
+							<div class="slt_title">“三伏”天变成好日</div>
 							<img src="https://www.tiandiming.com/9981/img/多彩生活/20200802-01.jpg" alt="">
 						</div>
 						<div class="slt" onclick="setIndex(4)">
+							<div class="slt_title">纯净Win10PE系统</div>
 							<img src="https://www.tiandiming.com/9981/工具/winpe/img/Win10PE桌面界面.png" alt="">
 						</div>
 					</div>
@@ -227,6 +230,8 @@
 		</div>
 	</body>
 </html>
+<script src="js/video.js"></script>
+<script src="js/videojs-contrib-hls.js"></script>
 <script type="text/javascript">
 	var player = videojs('ntdtv', {
 		"poster": "",
