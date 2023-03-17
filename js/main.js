@@ -1,4 +1,34 @@
 
+// 获取当前时间
+function get_day(){
+    var t = new Date,    //获取当前shij
+        year = t.getFullYear(),  //获取当前时间的年份
+        month = t.getMonth(),    //获取当前时间的月份
+        day = t.getDate(),   //获取当前时间的日
+        week = t.getDay(),   //获取当前时间星期
+        weekArr = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"),
+        showTime = "当前时间：" + year + "年" + month + "月" + day + "日" + " " + weekArr[week],
+        times = document.getElementById("times");
+    times.innerHTML = showTime;
+}
+
+
+
+// 随机摘要缩略图
+function zy_img(){
+	var sl_img = document.getElementsByClassName("sl_img");
+
+    for (var i = 0; i <= sl_img.length; i++) {
+        var random_bg = Math.floor(Math.random() * 36);
+        sl_img[i].src = "./img/imgzy/" +random_bg + ".jpg";
+    }
+}
+
+window.onload = function (){
+    get_day()
+    zy_img()
+}
+
 
 //显示的轮播图片下标
 let index = 0;
@@ -46,18 +76,4 @@ function rightShift(){
 function setIndex(idx){
     index = idx;
     refresh();
-}
-
-
-// 获取当前时间
-window.onload = function (){
-    var t = new Date,    //获取当前shij
-        year = t.getFullYear(),  //获取当前时间的年份
-        month = t.getMonth(),    //获取当前时间的月份
-        day = t.getDate(),   //获取当前时间的日
-        week = t.getDay(),   //获取当前时间星期
-        weekArr = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"),
-        showTime = "当前时间：" + year + "年" + month + "月" + day + "日" + " " + weekArr[week],
-        times = document.getElementById("times");
-    times.innerHTML = showTime;
 }

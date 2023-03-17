@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="比邻而坐" />
+		<link rel="shortcut icon" href="../../../img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../../../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/newscss.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/prettify.css">
+        <script src="../../../js/prettify.js"></script>
+		<title>python 制作二维码 简单生成二维码 —— 比邻而坐</title>
+	</head>
+	<body onload="prettyPrint()">
+		<div id="main">
+			<div id="header">
+				<div id="logo">
+					<img src="../../../img/logo.png"  alt="比邻而坐 —— bilinerz.github.io" />
+				</div>
+				<div id="nav">
+					<ul>
+						<li><a href="../../../index.html">首页</a></li>
+						<li><a href="">传统文化</a></li>
+						<li><a href="">多彩生活</a></li>
+						<li><a href="">热点新闻</a></li>
+						<li><a href="">站长推荐</a></li>
+						<li><a href="">编程笔记</a></li>
+						<li><a href="../../../menu/Music/Music.html" target="_blank">音樂</a></li>
+					</ul>
+				</div>
+			</div>
+            <div class="content">
+                <h2>python 制作二维码 简单生成二维码</h2>
+                <div class="date">时间：2021-01-21 | 分类：编程笔记>Python</div>
+                <hr>
+                <p>python 可以使用 qrcode 模块轻松生成二维码图片。</p>
+                <p>但是 qrcode模块 依赖于 pillow模块，所以还要把 pillow 安装上。</p>
+                <p>首先安装两个库：</p>
+                <p>
+                    <span style="background-color:#000000;color:#FFFFFF;">pip install qrcode</span> 
+                </p>
+                <p>
+                    <span style="color:#FFFFFF;background-color:#000000;">pip install pillow</span> 
+                </p>
+                <p>如果只想创建简单的二维码图像只需 qrcode.make() 创建 PilImage对象，再通过Pillow（PIL）的 Image 对象的 show() 方法即可预览生成的二维码图像，使用 save("文件路径") 方法将生成的二维码保存。</p>
+                <p>简单例子如下：</p>
+
+<pre class="prettyprint linenums">
+    import qrcode
+    img = qrcode.make(“hello hello test”)# 生成二维码
+    img.show()# 预览二维码
+    # img.save("hello.jpg")# 保存二维码
+</pre>
+                <p>对二维码進行更多设置</p>
+<pre class="prettyprint linenums">
+    qr = qrcode.QRCode(
+        version=2, #version值的增加会增加黑白方块点数，最小值为 1 最大值为 40。
+        error_correction=qrcode.constants.ERROR_CORRECT_L,#二维码的纠错范围
+        box_size=10, # 每个方块中的像素
+        border=2  #二维码与边框距离
+    )
+    qr.add_data(“hello hello test”)
+    qr.make(fit=True)# 生成二维码
+    #二维码设置 fill_color设置方块颜色，back_color设置背景颜色
+    img = qr.make_image(fill_color="green", back_color="blue")
+    img.show()
+</pre>
+            </div>
+            <div id="footer">
+				<p>©Copyright 2023 <a href="https://bilinerz.github.io">比邻而坐</a> All right reserved.</p>
+			</div>
+        </div>
+    </body>
+</html>
