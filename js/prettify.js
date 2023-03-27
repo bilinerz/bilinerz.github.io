@@ -1739,7 +1739,7 @@ var prettyPrint;
   }
 })();
 /*åˆå§‹åŒ–prettyPrint*/
-jQuery(window).load(function(){
-    //jQuery("pre").addClass("prettyprint");
-     prettyPrint();
-})
+// jQuery(window).load(function(){
+//     //jQuery("pre").addClass("prettyprint");
+//      prettyPrint();
+// })
