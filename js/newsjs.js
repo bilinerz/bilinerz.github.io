@@ -4,8 +4,8 @@ window.onload = function(){
     prettyPrint()
     myAjax({
         type:'get',
-        // url:'http://127.0.0.1:8080/bilinerz-data/data.php',
-        url:'https://tv.kanzx.ga/bilinerz-data/data.php',
+        // url:'http://127.0.0.1:8080/bilinerz/data.php',
+        url:'https://tv.kanzx.ga/bilinerz/data.php',
         data:{
             title: h2_title.innerText,
             info:0
@@ -21,8 +21,8 @@ window.onload = function(){
 function solzn(){
     myAjax({
         type:'get',
-        // url:'http://127.0.0.1:8080/bilinerz-data/data.php',
-        url:'https://tv.kanzx.ga/bilinerz-data/data.php',
+        // url:'http://127.0.0.1:8080/bilinerz/data.php',
+        url:'https://tv.kanzx.ga/bilinerz/data.php',
         data:{
             title: h2_title.innerText,
             info:1
