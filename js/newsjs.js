@@ -5,7 +5,7 @@ window.onload = function(){
     myAjax({
         type:'get',
         // url:'http://127.0.0.1:8080/bilinerz/data.php',
-        url:'https://tv.kanzx.ga/bilinerz/data.php',
+        url:'https://bilinerz.kanzx.ga/data.php',
         data:{
             title: h2_title.innerText,
             info:0
@@ -22,7 +22,7 @@ function solzn(){
     myAjax({
         type:'get',
         // url:'http://127.0.0.1:8080/bilinerz/data.php',
-        url:'https://tv.kanzx.ga/bilinerz/data.php',
+        url:'https://bilinerz.kanzx.ga/data.php',
         data:{
             title: h2_title.innerText,
             info:1
