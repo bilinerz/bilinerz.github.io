@@ -1,7 +1,7 @@
 
 var h2_title = document.getElementById("h2_title");
+var if_pre = document.getElementById("if_pre");
 window.onload = function(){
-    prettyPrint()
     myAjax({
         type:'get',
         // url:'http://127.0.0.1:8080/bilinerz/data.php',
@@ -16,6 +16,9 @@ window.onload = function(){
             document.getElementById('zn').innerText="赞 " + data.zn;
         }
     });
+    if (if_pre.innerText == "编程笔记"){
+        prettyPrint();
+    }
 };
 
 function solzn(){
