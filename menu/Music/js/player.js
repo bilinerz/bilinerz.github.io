@@ -40,8 +40,8 @@ class Musics {
 					路不拾遗太平世，夜不闭户更祥瑞。<br>\
 					真善忍能使人心美，源远古风又璨璀，<br>\
 					重德行善福相随，人间再映天堂辉。',
-                songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/思故國.mp3',
-                imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/思故國.jpg'
+                songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/思故國.mp3',
+                imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/思故國.jpg'
             },
 			{
 			    id: 2,
@@ -66,8 +66,8 @@ class Musics {
 					那是生命的蓝天 那是希望的田野<br>\
 					真善忍充满在人间<br>\
 					让我们感受天地更加美丽',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/让生命去感受（钢琴伴奏）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/让生命去感受.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/让生命去感受（钢琴伴奏）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/让生命去感受.jpg'
 			},
             {
                 id: 3,
@@ -92,16 +92,16 @@ class Musics {
 					那是生命的蓝天 那是希望的田野<br>\
 					真善忍充满在人间<br>\
 					让我们感受天地更加美丽',
-                songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/让生命去感受.mp3',
-                imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/让生命去感受.jpg'
+                songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/让生命去感受.mp3',
+                imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/让生命去感受.jpg'
             },
 			{
 			    id: 4,
 			    title: '女声独唱：九字真言',
 			    singer: '',
 				ci:'法轮大法好，真善忍好。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/女声独唱：九字真言.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/女声独唱：九字真言.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/女声独唱：九字真言.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/女声独唱：九字真言.jpg'
 			},
 			{
 			    id: 5,
@@ -109,8 +109,8 @@ class Musics {
 			    singer: '',
 				ci:'乐曲介绍：<br>\
 					神韵艺术团的演出就像给众生最慈悲的礼物。乐曲中想表达神圣、感动、慈悲，以及师父度人的辛劳（是我自己个人层次的理解） - 献礼风靡全球的神韵艺术团',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/慈悲的礼物.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/慈悲的礼物.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/慈悲的礼物.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/慈悲的礼物.jpg'
 			},
 			{
 			    id: 6,
@@ -137,16 +137,16 @@ class Musics {
 					有一道金色的彩霞，<br>\
 					会带来万道金光，<br>\
 					那是觉者真正的家园。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/我问那南来北往的大雁.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/我问那南来北往的大雁.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/我问那南来北往的大雁.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/我问那南来北往的大雁.jpg'
 			},
 			{
 			    id: 7,
 			    title: '凡花落尽',
 			    singer: '作曲: 台湾大法弟子',
 				ci:'',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/凡花落尽.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/凡花落尽.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/凡花落尽.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/凡花落尽.jpg'
 			},
 			{
 			    id: 8,
@@ -158,8 +158,8 @@ class Musics {
 					长歌古道行　大唐遗梦寻<br>\
 					渭城朝雨新　阳关故人还<br>\
 					长安今又现　大法度唐人',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/大唐的记忆（伴奏）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/大唐的记忆（伴奏）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/大唐的记忆（伴奏）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/大唐的记忆（伴奏）.jpg'
 			},
 			{
 			    id: 9,
@@ -171,16 +171,16 @@ class Musics {
 					长歌古道行　大唐遗梦寻<br>\
 					渭城朝雨新　阳关故人还<br>\
 					长安今又现　大法度唐人',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/大唐的记忆.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/大唐的记忆.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/大唐的记忆.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/大唐的记忆.jpg'
 			},
 			{
 			    id: 10,
 			    title: '来归行',
 			    singer: '作者作曲: 大法弟子 配器: 陈东',
 				ci:'',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/来归行.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/来归行.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/来归行.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/来归行.jpg'
 			},
 			{
 			    id: 11,
@@ -200,16 +200,16 @@ class Musics {
 					寸草难报三春晖<br>\
 					唯有精进再精进<br>\
 					同化大法随师归',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/男声独唱：来归行.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/男声独唱：来归行.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/男声独唱：来归行.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/男声独唱：来归行.jpg'
 			},
 			{
 			    id: 12,
 			    title: '隐约想起来',
 			    singer: '作者周快',
 				ci:'',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/隐约想起来.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/隐约想起来.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/隐约想起来.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/隐约想起来.jpg'
 			},
 			{
 			    id: 13,
@@ -250,8 +250,8 @@ class Musics {
 					<br>\
 					你可别再彷徨犹豫，<br>\
 					永远错过这稍纵即逝的良机。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/快醒醒.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/快醒醒.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/快醒醒.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/快醒醒.jpg'
 			},
             {
                 id: 14,
@@ -265,8 +265,8 @@ class Musics {
 					人生成败过眼烟。<br>\
 					是非本是前世怨，<br>\
 					得法破迷上青天。',
-                songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/梦醒.mp3',
-                imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/梦醒.jpg'
+                songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/梦醒.mp3',
+                imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/梦醒.jpg'
             },
 			{
 			    id: 15,
@@ -304,8 +304,8 @@ class Musics {
 					飞向可贵的每个生命，<br>\
 					带着光明，带着祥和，<br>\
 					把美好的种子撒播。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/在这难忘的时刻.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/在这难忘的时刻.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/在这难忘的时刻.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/在这难忘的时刻.jpg'
 			},
 			{
 			    id: 16,
@@ -342,8 +342,8 @@ class Musics {
 					学会了忍让 使我看得更清<br>\
 					阳光下遇见了你 我与你 相随不离 ~ 我与你 相随不离<br>\
 					真善忍 遇见你   ',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/阳光下遇见你（伴奏）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/阳光下遇见你（伴奏）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/阳光下遇见你（伴奏）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/阳光下遇见你（伴奏）.jpg'
 			},
 			{
 			    id: 17,
@@ -380,8 +380,8 @@ class Musics {
 					学会了忍让 使我看得更清<br>\
 					阳光下遇见了你 我与你 相随不离 ~ 我与你 相随不离<br>\
 					真善忍 遇见你   ',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/阳光下遇见你.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/阳光下遇见你.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/阳光下遇见你.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/阳光下遇见你.jpg'
 			},
 			{
 			    id: 18,
@@ -401,8 +401,8 @@ class Musics {
 					力挡群邪千万难 真念只为誓愿洪<br>\
 					一身忠直震寰宇 一片丹心照汗青<br>\
 					需知天地有正气 法正人间万世平',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/正气歌（伴奏）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/正气歌（伴奏）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/正气歌（伴奏）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/正气歌（伴奏）.jpg'
 			},
 			{
 			    id: 19,
@@ -439,8 +439,8 @@ class Musics {
 					法轮大法好啊<br>\
 					法轮大法好<br>\
 					切莫错过这万古机缘',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/为你而来.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/为你而来.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/为你而来.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/为你而来.jpg'
 			},
 			{
 			    id: 20,
@@ -450,8 +450,8 @@ class Musics {
 					笑也纯来哭也真<br>\
 					莫忘今世法缘重<br>\
 					家在仙宫不在尘',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/纯真（《震撼》电影主题曲）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/纯真（《震撼》电影主题曲）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/纯真（《震撼》电影主题曲）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/纯真（《震撼》电影主题曲）.jpg'
 			},
 			{
 			    id: 21,
@@ -473,8 +473,8 @@ class Musics {
 					Compassion grows in our hearts.<br>\
 					Together in silence,<br>\
 					our wishes can make a difference.',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/请与我比邻而坐.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/请与我比邻而坐.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/请与我比邻而坐.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/请与我比邻而坐.jpg'
 			},
 			{
 			    id: 22,
@@ -483,24 +483,24 @@ class Musics {
 				ci:'此曲是为表达法轮功学员们面对无理打压时，<br>\
 					依然怀抱一颗悲悯温柔的心…<br>\
 					呼吁全世界善良的人们与我同行 停止迫害',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/与我同行.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/与我同行.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/与我同行.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/与我同行.jpg'
 			},
 			{
 			    id: 23,
 			    title: '荷塘清音',
 			    singer: '作曲/配器：TONY CHEN',
 				ci:'',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/荷塘清音.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/荷塘清音.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/荷塘清音.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/荷塘清音.jpg'
 			},
 			{
 			    id: 24,
 			    title: '当法呈现在面前（钢琴独奏）',
 			    singer: '作曲: 美西法轮功学员',
 				ci:'',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/当法呈现在面前（钢琴独奏）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/当法呈现在面前（钢琴独奏）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/当法呈现在面前（钢琴独奏）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/当法呈现在面前（钢琴独奏）.jpg'
 			},
 			{
 			    id: 25,
@@ -537,8 +537,8 @@ class Musics {
 					万古的机缘撒满天地间，<br>\
 					是您带着众生走向未来，<br>\
 					大法的光辉永远照耀在苍宇间。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/师恩颂（管弦乐伴奏）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/师恩颂（管弦乐伴奏）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/师恩颂（管弦乐伴奏）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/师恩颂（管弦乐伴奏）.jpg'
 			},
 			{
 			    id: 26,
@@ -575,8 +575,8 @@ class Musics {
 					万古的机缘撒满天地间，<br>\
 					是您带着众生走向未来，<br>\
 					大法的光辉永远照耀在苍宇间。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/师恩颂 - 2006小合唱.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/师恩颂 - 2006小合唱.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/师恩颂 - 2006小合唱.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/师恩颂 - 2006小合唱.jpg'
 			},
 			{
 			    id: 27,
@@ -586,8 +586,8 @@ class Musics {
 					(一)行板:下世轮回,历尽世事,苦等圣缘<br>\
 					(二)快板:喜得大法,真我梦醒,法中重生<br>\
 					(三)小快板:前景光明,感怀师恩,归途有望',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/找回真我（小提琴、钢琴、bE调）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/找回真我（小提琴、钢琴、bE调）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/找回真我（小提琴、钢琴、bE调）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/找回真我（小提琴、钢琴、bE调）.jpg'
 			},
 			{
 			    id: 28,
@@ -597,8 +597,8 @@ class Musics {
 					(一)行板:下世轮回,历尽世事,苦等圣缘<br>\
 					(二)快板:喜得大法,真我梦醒,法中重生<br>\
 					(三)小快板:前景光明,感怀师恩,归途有望',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/找回真我（笛、钢琴、D调）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/找回真我（笛、钢琴、D调）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/找回真我（笛、钢琴、D调）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/找回真我（笛、钢琴、D调）.jpg'
 			},
 			{
 			    id: 29,
@@ -609,16 +609,16 @@ class Musics {
 					来去匆匆，机缘莫误，繁忙人世中，<br>\
 					请停下脚步，听听箫声洗涤心灵，<br>\
 					听听大法弟子讲真相、得救度。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/机缘莫误.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/机缘莫误.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/机缘莫误.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/机缘莫误.jpg'
 			},
 			{
 			    id: 30,
 			    title: '天兵天将护法神',
 			    singer: '作者/词: 清淡',
 				ci:'',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/天兵天将护法神.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/天兵天将护法神.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/天兵天将护法神.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/天兵天将护法神.jpg'
 			},
 			{
 			    id: 31,
@@ -634,8 +634,8 @@ class Musics {
 					江河向往大海。<br>\
 					我的心向往美好的未来，<br>\
 					向往世界充满真善忍。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/世界需要真善忍.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/世界需要真善忍.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/世界需要真善忍.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/世界需要真善忍.jpg'
 			},
 			{
 			    id: 32,
@@ -653,8 +653,8 @@ class Musics {
 					记得那个美丽的地方是我们的故乡；<br>\
 					自从我们相继来到不是家的这个地方，<br>\
 					生生世世在轮回中期待—— 有一天得法回到故乡！',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/最初的家园.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/最初的家园.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/最初的家园.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/最初的家园.jpg'
 			},
 			{
 			    id: 33,
@@ -664,8 +664,8 @@ class Musics {
 					耀耀星河指向天<br>\
 					心系众生展百技<br>\
 					云霄天际满彩辉',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/群星报喜.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/群星报喜.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/群星报喜.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/群星报喜.jpg'
 			},
 			{
 			    id: 34,
@@ -673,8 +673,8 @@ class Musics {
 			    singer: '演奏：陈国华',
 				ci:'1. 各式装饰音参照中国曲风「萧」或「笛子」的特点吹奏。<br>\
 					2. 萧的部分,也可以用低音曲笛、西洋横笛吹奏。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/人间清流天上来.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/人间清流天上来.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/人间清流天上来.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/人间清流天上来.jpg'
 			},
 			{
 			    id: 35,
@@ -696,8 +696,8 @@ class Musics {
 					告诉他寒冬已过就春天要来到<br>\
 					告诉他大法的光芒已覆盖了苍穹<br>\
 					告诉他帆已张满了渡船即将启航 告诉他我们在等他回家',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/让他们都知道（伴奏版）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/与我同行.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/让他们都知道（伴奏版）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/与我同行.jpg'
 			},
 			{
 			    id: 36,
@@ -708,8 +708,8 @@ class Musics {
 					终于我找到那个地方那是我们回归的天堂<br>\
 					真善忍他重现在我心中从此我不再迷失方向<br>\
 					不再迷失方向不再迷失方向',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/女声独唱：寻求 (钢琴伴奏).mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/女声独唱：寻求 (钢琴伴奏).jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/女声独唱：寻求 (钢琴伴奏).mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/女声独唱：寻求 (钢琴伴奏).jpg'
 			},
 			{
 			    id: 37,
@@ -738,8 +738,8 @@ class Musics {
 					不是梦<br>\
 					无量众生<br>\
 					终得救',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/女声独唱：梦里的期盼.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/女声独唱：梦里的期盼.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/女声独唱：梦里的期盼.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/女声独唱：梦里的期盼.jpg'
 			},
 			{
 			    id: 38,
@@ -773,8 +773,8 @@ class Musics {
 					Making our way home,the law wheel is turning<br>\
 					Making our way home,on the last leg of the journey<br>\
 					Making our way home.',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/The Way Home（返本归真之路）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/The Way Home（返本归真之路）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/The Way Home（返本归真之路）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/The Way Home（返本归真之路）.jpg'
 			},
 			{
 			    id: 39,
@@ -806,8 +806,8 @@ class Musics {
 					不要再漫无目光<br>\
 					迈大步走出迷雾<br>\
 					',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/Saturday Morning（星期六早晨）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/Saturday Morning（星期六早晨）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/Saturday Morning（星期六早晨）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/Saturday Morning（星期六早晨）.jpg'
 			},
 			{
 			    id: 40,
@@ -828,8 +828,8 @@ class Musics {
 					<br>\
 					心疼你！被谎言聚满那脆弱敏感的心！<br>\
 					珍惜你！为你盼得法而不惧危险的心！',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/我，义无反顾 - 伴奏.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/我，义无反顾 - 伴奏.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/我，义无反顾 - 伴奏.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/我，义无反顾 - 伴奏.jpg'
 			},
 			{
 			    id: 41,
@@ -850,8 +850,8 @@ class Musics {
 					<br>\
 					心疼你！被谎言聚满那脆弱敏感的心！<br>\
 					珍惜你！为你盼得法而不惧危险的心！',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/我，义无反顾合唱（女声领唱）.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/找回真我（小提琴、钢琴、bE调）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/我，义无反顾合唱（女声领唱）.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/找回真我（小提琴、钢琴、bE调）.jpg'
 			},
 			{
 			    id: 42,
@@ -866,8 +866,8 @@ class Musics {
 					大选起伏人心明<br>\
 					亘古天门迎义仁<br>\
 					悠悠万载纪元兴',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/钢琴独奏曲：万象更新.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/正气歌（伴奏）.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/钢琴独奏曲：万象更新.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/正气歌（伴奏）.jpg'
 			},
 			{
 			    id: 43,
@@ -887,8 +887,8 @@ class Musics {
 					妙音飘渺细聆听<br>\
 					焚香举目邀嫦娥<br>\
 					道童仙子舞月影',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/女声独唱：飞天庭.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/女声独唱：飞天庭.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/女声独唱：飞天庭.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/女声独唱：飞天庭.jpg'
 			},
 			{
 			    id: 44,
@@ -897,8 +897,8 @@ class Musics {
 				ci:'介绍：<br>\
 					这一首曲子作为2021年的第一首创作，想要发自内心赞颂“真善忍”。<br>\
 					“真善忍”三个字简单但却威力巨大，无论你多繁杂的思绪，念动“真善忍”的时候会将它们都驱散。无论这个世界多么复杂、道德下滑的速度有多快、时局有多么动荡，“真善忍”三个字永远都不会变，念动他，一切邪恶会被解体驱散。在瘟疫的肆虐中，念动他可保平安。相信不久的将来“真善忍”的光芒会温暖每一个人的心田、照亮整个寰宇。此曲叫做“真善忍的光芒“，“真善忍”内涵极其广大，此曲灵感仅来自我在法轮大法修炼中现有层次的理解。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/乐曲：真善忍的光芒.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/乐曲：真善忍的光芒.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/乐曲：真善忍的光芒.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/乐曲：真善忍的光芒.jpg'
 			},
 			{
 			    id: 45,
@@ -931,8 +931,8 @@ class Musics {
 					Ich bleib nicht stehn, werd nicht untergehen<br>\
 					Dann werd ich zu Hause sein<br>\
 					Ja dann bin ich wieder daheim',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/铜管重奏：希望之光 (The Light).mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/世界需要真善忍.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/铜管重奏：希望之光 (The Light).mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/世界需要真善忍.jpg'
 			},
 			{
 			    id: 46,
@@ -977,8 +977,8 @@ class Musics {
 					唤醒了<br>\
 					久远的梦想<br>\
 					随创世主回归穹苍',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/伴奏音乐：千年等大法.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/伴奏音乐：千年等大法.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/伴奏音乐：千年等大法.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/伴奏音乐：千年等大法.jpg'
 			},
 			{
 			    id: 47,
@@ -992,8 +992,8 @@ class Musics {
 					功成圆满随师还, 天地永固法长存。<br>\
 					大法弟子亿万众，众志成城魔胆寒。<br>\
 					齐发正念灭败物, 法正人间有一天。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/女声独唱：雨后.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/女声独唱：雨后.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/女声独唱：雨后.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/女声独唱：雨后.jpg'
 			},
 			{
 			    id: 48,
@@ -1020,8 +1020,8 @@ class Musics {
 					宇宙大法创世主<br>\
 					法正乾坤新宇天<br>\
 					法正乾坤新宇天',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/儿歌：福无边.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/儿歌：福无边.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/儿歌：福无边.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/儿歌：福无边.jpg'
 			},
 			{
 			    id: 49,
@@ -1045,8 +1045,8 @@ class Musics {
 					紧随恩师降妖除魔，<br>\
 					讲清真相慈悲救度众生，<br>\
 					圆满功成同回天国。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/女声独唱：修炼路上.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/修炼的记忆.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/女声独唱：修炼路上.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/修炼的记忆.jpg'
 			},
 			{
 			    id: 50,
@@ -1063,8 +1063,8 @@ class Musics {
 					法轮旋呀旋，带我回天国，那里有我的众生。<br>\
 					我要叫他们同化“真善忍”成就最亮的星星。<br>\
 					法轮旋呀旋旋呀旋，风中，雨中，晴天。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/星星的故事.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/梦醒.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/星星的故事.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/梦醒.jpg'
 			},
 			{
 			    id: 51,
@@ -1075,8 +1075,8 @@ class Musics {
 					秉烛夜读寒窗苦，白日升起天地明；<br>\
 					心中罗盘胸中法，宝剑出鞘马嘶鸣。<br>\
 					宝剑出鞘马嘶鸣。',
-			    songUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/静心.mp3',
-			    imageUrl: 'https://www.tiandiming.com/9981/music/天音凈樂/img/静心.jpg'
+			    songUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/静心.mp3',
+			    imageUrl: 'https://bilinerz.eu.org/9981/music/天音凈樂/img/静心.jpg'
 			}
         ]
     }
