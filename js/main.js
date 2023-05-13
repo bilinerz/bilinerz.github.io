@@ -17,10 +17,19 @@ function get_day(){
 // 随机摘要缩略图
 function zy_img(){
 	var sl_img = document.getElementsByClassName("sl_img");
-
-    for (var i = 0; i <= sl_img.length; i++) {
-        var random_img = Math.floor(Math.random() * 39);
-        sl_img[i].src = "./img/imgzy/" + random_img + ".jpg";
+    var curPageUrl = window.document.location.href; //获取当前页面URL
+    //如果当前页面URL不存在page
+    if (curPageUrl.search(/page/) != -1) { 
+        var rootPath = curPageUrl.split("page")[0];
+        for (var i = 0; i <= sl_img.length; i++) {
+            var random_img = Math.floor(Math.random() * 39);
+            sl_img[i].src = rootPath + "img/imgzy/" + random_img + ".jpg";
+        }
+    } else {
+        for (var i = 0; i <= sl_img.length; i++) {
+            var random_img = Math.floor(Math.random() * 39);
+            sl_img[i].src = "./img/imgzy/" + random_img + ".jpg";
+        }
     }
 }
 
