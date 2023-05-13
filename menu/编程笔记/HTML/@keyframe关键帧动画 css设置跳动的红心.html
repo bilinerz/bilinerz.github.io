@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="比邻而坐" />
+        <meta name="keywords" content="@keyframe,关键帧动画,css设置跳动的红心" />
+		<meta name="description" content="使用 css @keyframe 关键帧动画设置跳动的红心。" />
+		<link rel="shortcut icon" href="../../../img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../../../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/newscss.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/prettify.css">
+        <script src="../../../js/prettify.js"></script>
+		<title>@keyframe关键帧动画 css设置跳动的红心 —— 比邻而坐</title>
+	</head>
+	<body>
+		<div id="main">
+			<div id="header">
+				<div id="logo">
+					<img src="../../../img/logo.png"  alt="比邻而坐 —— bilinerz.github.io" />
+				</div>
+				<div id="nav">
+					<ul>
+						<li><a href="../../../index.html">首页</a></li>
+						<li><a href="">传统文化</a></li>
+						<li><a href="">多彩生活</a></li>
+						<li><a href="">热点新闻</a></li>
+						<li><a href="">站长推荐</a></li>
+						<li><a href="">编程笔记</a></li>
+						<li><a href="../../../menu/Music/Music.html" target="_blank">音樂</a></li>
+					</ul>
+				</div>
+			</div>
+            <div class="content">
+                <h2 id="h2_title">@keyframe关键帧动画 css设置跳动的红心</h2>
+                <div class="date">时间：2020-12-03 | 分类：<span id="if_pre">编程笔记</span>>HTML | 阅读：<span id="yd"></span></div>
+                <hr>
+                <style type="text/css">
+                    span{display: inline-block;}
+                    .heart_left, .heart_right{
+                        width: 50px; height: 80px; background-color: red;
+                        border-top-left-radius: 25px;
+                        border-top-right-radius: 25px;
+                    }
+                    .heart_left{transform: rotateZ(-45deg);}
+                    .heart_right{transform: translateX(-28px) rotateZ(45deg);}
+                    .heart{margin: 20px 20px;animation: beat 1.5s infinite;}
+                    @keyframes beat{
+                        30%{transform: scale(1.3);}
+                        100%{transform: scale(1);}
+                    }
+                </style>
+                <div>
+                    <span class="heart"> <span class="heart_left"></span><span class="heart_right"></span> </span> 
+                </div>
+                <div style="background:black;">
+                    <span style="color:#FFFFFF;">&lt;<span style="color:#CC33E5;">style</span> <span style="color:#99BB00;">type</span><span style="color:#99BB00;">=<span style="color:#FFE500;">"text/css"</span>&gt;</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;span{<span style="color:#00D5FF;">display</span>: <span style="color:#4C33E5;">inline-block</span>;}<span style="color:#999999;">/*将span设置为块级对象 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#999999;">/* 设置两个span的高度宽度和顶部半圆 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#99BB00;">.heart_left</span>, <span style="color:#99BB00;">.heart_right</span>{</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">width</span>: 50px; <span style="color:#00D5FF;">height</span>: 80px; <span style="color:#00D5FF;">background-color</span>: red;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">border-top-left-radius</span>: 25px;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">border-top-right-radius</span>: 25px;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#99BB00;">.heart_left</span>{<span style="color:#00D5FF;">transform</span>: rotateZ(-45deg);}<span style="color:#999999;">/* 左边的span以Z轴旋转-45度 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#99BB00;">.heart_right</span>{<span style="color:#00D5FF;">transform</span>: translateX(-28px) rotateZ(45deg);}/<span style="color:#999999;">* 右边的span以X轴移动-28px以Z轴旋转45度 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#99BB00;">.heart</span>{<span style="color:#00D5FF;">margin</span>: 20px 20px;<span style="color:#00D5FF;">animation</span>: beat 1.5s <span style="color:#4C33E5;">infinite</span>;}<span style="color:#999999;">/* infinite 无限执行动画 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#999999;">/* 设置帧动画 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#99BB00;">@keyframes</span> beat{</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;30%{<span style="color:#00D5FF;">transform</span>: <span style="color:#4C33E5;">scale</span>(1.3);}<span style="color:#999999;">/* 到30%节点放大1.3倍 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;100%{<span style="color:#00D5FF;">transform</span>: <span style="color:#4C33E5;">scale</span>(1);}<span style="color:#999999;">/* 到最后还原 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</span><br />
+                    &nbsp; <span style="color:#FFFFFF;">&lt;/<span style="color:#CC33E5;">style</span>&gt;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp; &lt;<span style="color:#CC33E5;">div</span>&gt;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp; &lt;<span style="color:#999999;">!-- 创建一个主span用来启动动画，两个span标签用来制作心形 --&gt;</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp; &lt;<span style="color:#9933E5;">span</span> <span style="color:#99BB00;">class</span><span style="color:#99BB00;">=<span style="color:#FFE500;">"heart"</span>&gt;</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;<span style="color:#CC33E5;">span</span> <span style="color:#99BB00;">class</span>="<span style="color:#FFE500;">heart_left"</span>&gt;&lt;/<span style="color:#CC33E5;">span</span>&gt;&lt;<span style="color:#CC33E5;">span</span> <span style="color:#99BB00;">class</span>=<span style="color:#FFE500;">"heart_right"</span>&gt;&lt;/<span style="color:#CC33E5;">span</span>&gt;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp; &lt;/<span style="color:#CC33E5;">span</span>&gt;</span><br />
+                    &nbsp; <span style="color:#FFFFFF;">&lt;/<span style="color:#CC33E5;">div</span>&gt;</span> 
+                </div>
+            </div>
+            <p id="zn" onclick="solzn()"></p>
+            <div id="footer">
+				<p>©Copyright 2023 <a href="https://bilinerz.github.io">比邻而坐</a> All right reserved.</p>
+			</div>
+        </div>
+    </body>
+</html>
+<script src="../../../js/myajax.js"></script>
+<script src="../../../js/newsjs.js"></script>

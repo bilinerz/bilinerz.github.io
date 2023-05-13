@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="比邻而坐" />
+        <meta name="keywords" content="HTML,checkbox,复选框" />
+		<meta name="description" content="使用 appearance: none; 去掉复选框的默认外观，便于设计新样式，使用after伪类元素在复选框中添加滑动按钮。" />
+		<link rel="shortcut icon" href="../../../img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="../../../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/newscss.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/prettify.css">
+        <script src="../../../js/prettify.js"></script>
+		<title>checkbox 设置滑动复选框 —— 比邻而坐</title>
+	</head>
+	<body>
+		<div id="main">
+			<div id="header">
+				<div id="logo">
+					<img src="../../../img/logo.png"  alt="比邻而坐 —— bilinerz.github.io" />
+				</div>
+				<div id="nav">
+					<ul>
+						<li><a href="../../../index.html">首页</a></li>
+						<li><a href="">传统文化</a></li>
+						<li><a href="">多彩生活</a></li>
+						<li><a href="">热点新闻</a></li>
+						<li><a href="">站长推荐</a></li>
+						<li><a href="">编程笔记</a></li>
+						<li><a href="../../../menu/Music/Music.html" target="_blank">音樂</a></li>
+					</ul>
+				</div>
+			</div>
+            <div class="content">
+                <h2 id="h2_title">checkbox 设置滑动复选框</h2>
+                <div class="date">时间：2020-12-03 | 分类：<span id="if_pre">编程笔记</span>>HTML | 阅读：<span id="yd"></span></div>
+                <hr>
+                <h3>点击按钮测试一下吧</h3>
+                <style type="text/css">
+                    *{padding: 0;margin: 0;}
+                    input[type='checkbox']{
+                        margin: 20px auto;
+                        appearance: none;
+                        border: 15px solid lightgray;
+                        border-radius: 50px;
+                        width: 300px; height: 100px;
+                        background: darkgray;
+                        position: relative;
+                        box-shadow: 0 0 10px 1px #3f3f3f inset;
+                        transition: 0.6s;
+                    }
+                    input[type='checkbox']::after{
+                        content: "";
+                        display: block;
+                        width: 100px; height: 100px;
+                        position: absolute;
+                        left: -5px; top: -15px;
+                        border-radius: 50px;
+                        background: linear-gradient(to bottom,#bcbcbc,#6f6f6f);
+                        box-shadow: 0px 2px 2px 0px #eee inset,2px 1px 2px 0px #333;
+                        transition: 0.6s;
+                    }
+                    input[type='checkbox']:checked{
+                        background: greenyellow;
+                    }
+                    input[type='checkbox']:checked::after{
+                        left: 175px;
+                    }
+                </style>
+                <input type="checkbox" /> 
+                <p>使用 appearance: none; 去掉复选框的默认外观，便于设计新样式。</p>
+                <p>使用after伪类元素在复选框中添加滑动按钮。</p>
+                <p>使用linear-gradient()设置按钮背景颜色线性渐变，使得按钮更真实。</p>
+                <p>box-shadow: 0px 2px 2px 0px #eee inset,2px 1px 2px 0px #333; 设置阴影效果，看起来更美观。</p>
+                <p>input[type='checkbox']:checked设置复选框被选中后的变化。</p>
+                <div style="background:black;">
+                    <span style="color:#FFE500;">&lt;!</span><span style="color:#FFFFFF;">DOCTYPE html</span><span style="color:#FFE500;">&gt;</span><br />
+                    <span style="color:#FFFFFF;">&lt;</span><span style="color:#CC33E5;">html</span><span style="color:#FFFFFF;">&gt;</span><br />
+                    &nbsp;&nbsp; &nbsp;<span style="color:#FFFFFF;">&lt;<span style="color:#CC33E5;">head</span>&gt;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;<span style="color:#CC33E5;">meta</span> <span style="color:#99BB00;">charset</span>=<span style="color:#FFE500;">"utf-8"</span>/&gt;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;<span style="color:#CC33E5;">title</span>&gt;&lt;/<span style="color:#CC33E5;">title</span>&gt;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&lt;/<span style="color:#CC33E5;">head</span>&gt;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&lt;<span style="color:#CC33E5;">style</span> <span style="color:#99BB00;">type</span><span style="color:#99BB00;">=<span style="color:#FFE500;">"text/css"</span><span style="color:#FFFFFF;">&gt;</span></span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;*{<span style="color:#00D5FF;">padding</span>: 0;<span style="color:#00D5FF;">margin</span>: 0;}</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;input[type='checkbox']{</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">margin</span>: 100px;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">appearance</span>: <span style="color:#4C33E5;">none</span>;<span style="color:#999999;">/* 去掉复选框默认样式 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">border</span>: 15px <span style="color:#4C33E5;">solid</span> lightgray;<span style="color:#999999;">/* 设置边框 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">border-radius</span>: 50px;<span style="color:#999999;">/* 设置圆角 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">width</span>: 300px; <span style="color:#00D5FF;">height</span>: 100px;<span style="color:#999999;">/* 设置宽高 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">background</span>: darkgray;<span style="color:#999999;">/* 设置背景颜色 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">position</span>: <span style="color:#4C33E5;">relative</span>;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">box-shadow</span>: 0 0 10px 1px #3f3f3f <span style="color:#4C33E5;">inset</span>;<span style="color:#999999;">/* 设置复选框内阴影效果 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">transition</span>: 0.6s;<span style="color:#999999;">/* 设置过渡动画时间 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#999999;">/* 使用after伪类元素添加滑动按钮 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;input[type='checkbox']::<span style="color:#4C33E5;">after</span>{</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">content</span>: "";</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">display</span>: block;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">width</span>: 100px; <span style="color:#00D5FF;">height</span>: 100px;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">position</span>: <span style="color:#4C33E5;">absolute</span>;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">left:</span> -5px; top: -15px;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">border-radius</span>: 50px;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#999999;">/* 使用线性渐变设置按钮背景颜色 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="color:#00D5FF;">&nbsp;background</span>: linear-gradient(to <span style="color:#00D5FF;">bottom</span>,#bcbcbc,#6f6f6f);</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#999999;">/* 设置按钮内外阴影效果 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">box-shadow</span>: 0px 2px 2px 0px #eee <span style="color:#4C33E5;">inset</span>,2px 1px 2px 0px #333;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">transition</span>: 0.6s;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#999999;">/* 使用checked来设置复选框被选中后的改变 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;input[type='checkbox']:<span style="color:#99BB00;">checked</span>{</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">background</span>: greenyellow;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#999999;">/* 设置按钮被选中后的改变 */</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;input[type='checkbox']:<span style="color:#99BB00;">checked</span>::<span style="color:#9933E5;">after</span>{</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<span style="color:#00D5FF;">left</span>: 175px;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&lt;/<span style="color:#CC33E5;">style</span>&gt;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&lt;<span style="color:#CC33E5;">body</span>&gt;</span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;<span style="color:#CC33E5;">input</span> <span style="color:#99BB00;">type</span>=<span style="color:#FFE500;">"checkbox"</span>&gt; <span style="color:#999999;">&lt;!-- 创建复选框 --&gt;</span></span><br />
+                    <span style="color:#FFFFFF;">&nbsp;&nbsp; &nbsp;&lt;/<span style="color:#CC33E5;">body</span>&gt;</span><br />
+                    <span style="color:#FFFFFF;">&lt;/<span style="color:#CC33E5;">html</span>&gt;</span> 
+                </div>
+            </div>
+            <p id="zn" onclick="solzn()"></p>
+            <div id="footer">
+				<p>©Copyright 2023 <a href="https://bilinerz.github.io">比邻而坐</a> All right reserved.</p>
+			</div>
+        </div>
+    </body>
+</html>
+<script src="../../../js/myajax.js"></script>
+<script src="../../../js/newsjs.js"></script>
