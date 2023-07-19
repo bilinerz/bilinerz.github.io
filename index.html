@@ -71,7 +71,7 @@
 					<div id="tv">
 						<section id="videoPlayer">
 							<video id="ntdtv" class="video-js vjs-default-skin vjs-big-play-centered" preload="auto" poster="img/ntdtv.jpg">
-								<source id="target" src="https://tv.kanzx.ga/meidong/playlist.m3u8" type="application/x-mpegURL">
+								<source id="target" src="https://tv.kanzx.eu.org/meidong/playlist.m3u8" type="application/x-mpegURL">
 							</video>
 						</section>
 					</div>
@@ -221,6 +221,7 @@
 					<p>
 						第 <a href="index.html">1</a>
 						<a href="page/2.html">2</a>
+						<a href="page/3.html">3</a>
 						页
 					</p>
 				</div>
@@ -252,14 +253,14 @@
 		})
 	});
 	
-	var meidong_src = 'https://tv.kanzx.ga/meidong/playlist.m3u8',
-		meixi_src = 'https://tv.kanzx.ga/meixi/playlist.m3u8',
-		ouzhou_src = 'https://tv.kanzx.ga/ouzhou/playlist.m3u8',
-		jiadong_src = 'https://tv.kanzx.ga/jiadong/playlist.m3u8',
-		jiaxi_src = 'https://tv.kanzx.ga/jiaxi/playlist.m3u8',
-		xiushidun_src = 'https://tv.kanzx.ga/xiushidun/playlist.m3u8',
-		yatai_src = 'https://tv.kanzx.ga/yatai/playlist.m3u8',
-		zhongguo_src = 'https://tv.kanzx.ga/zhongguo/playlist.m3u8';
+	var meidong_src = 'https://tv.kanzx.eu.org/meidong/playlist.m3u8',
+		meixi_src = 'https://tv.kanzx.eu.org/meixi/playlist.m3u8',
+		ouzhou_src = 'https://tv.kanzx.eu.org/ouzhou/playlist.m3u8',
+		jiadong_src = 'https://tv.kanzx.eu.org/jiadong/playlist.m3u8',
+		jiaxi_src = 'https://tv.kanzx.eu.org/jiaxi/playlist.m3u8',
+		xiushidun_src = 'https://tv.kanzx.eu.org/xiushidun/playlist.m3u8',
+		yatai_src = 'https://tv.kanzx.eu.org/yatai/playlist.m3u8',
+		zhongguo_src = 'https://tv.kanzx.eu.org/zhongguo/playlist.m3u8';
 	
 	var changeVideo = function (vdoSrc) {
 		if (/\.m3u8$/.test(vdoSrc)) { //判断视频源是否是m3u8的格式
@@ -303,7 +304,7 @@
 	setTimeout(function(){
 		myAjax({
 			type:'get',
-			url:'https://tv.kanzx.ga/fangke/fangke.php',
+			url:'https://tv.kanzx.eu.org/fangke/fangke.php',
 			data:{
 				url:'bilinerz.github.io',
 				info:1
