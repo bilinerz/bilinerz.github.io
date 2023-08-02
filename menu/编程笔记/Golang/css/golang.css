@@ -1,0 +1,37 @@
+*{margin: 0px;padding: 0px;}
+
+#book_nav{
+    margin: 20px 0 0 40px;
+}
+#book_nav>ul> li{
+    padding: 10px;
+}
+#book_nav li:hover{
+    cursor: pointer;
+}
+#book_nav a{
+    text-decoration: none;
+}
+
+.two_menu{
+    margin-top: 10px;
+    display: none;
+}
+.two_menu a{
+    margin-left: 20px;
+    line-height: 25px;
+}
+.two_menu li{
+    list-style-type: none;
+}
+.book-main{
+    margin: 20px 0 0 20px;
+}
+.book-main>h3{padding: 5px;}
+.book-main>p, .book-main>li{
+    text-indent: 2em;
+}
+
+.top-img{
+    margin: 50px auto;
+}

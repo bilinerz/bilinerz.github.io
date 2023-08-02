@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="../css/golang.css">
+<div class="book-main">
+    <h3>Windows 安装 vs code</h3>
+    <p>下载地址：<a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com</a></p>
+    <p>选择windows版本下载，vscode有新版本时候会自动更新，重启即可更新。</p>
+    <p>傻瓜式安装一直下一步就好了</p>
+    <h3>配置 vs code</h3>
+    <h4>安装中文简体插件</h4>
+    <p>点击左侧菜单栏最后一项管理扩展，在搜索框中输入chinese，选中结果列表第一项，点击install安装。</p>
+    <p>安装完毕后右下角会提示重启VS Code，重启之后就会显示中文了。</p>
+    <img src="https://topgoer.com/static/2/vscode.gif" alt="">
+    <h4>安装go插件</h4>
+    <p>启动vscode选择插件->搜go选择Go for Visual Studio Code插件点击安装即可。</p>
+    <img src="https://topgoer.com/static/2/8.png" alt="">
+    <h4>安装Go语言开发工具包</h4>
+    <p>按下 Ctrl+Shift+P 键在弹出的输入框中输入 go:install ——> 选择 Go:Install/Update Tools</p>
+    <img src="https://topgoer.com/static/2/25.png" alt="">
+    <p>全选所有插件后按下回车键自动安装</p>
+    <img src="https://topgoer.com/static/2/26.png" alt="">
+    <p><b>由于国内的网络环境的封闭基本上都会出现安装失败的情况</b></p>
+    <h4>解决安装失败的方法</h4>
+    <p>手动从github上下载这些工具插件</p>
+    <li>第一步：现在自己的 GOPATH 的 pkg/mod 目录下创建 golang.org/x 目录</li>
+    <li>第二步：打开cmd cd到 GOPATH/pkg/mod/golang.org/x 目录下</li>
+    <li>第三步：执行 <span style="color: white;background-color: black;">git clone https://github.com/golang/tools.git tools</span> 命令</li>
+    <li>第四步：执行 <span style="color: white;background-color: black;">git clone https://github.com/golang/lint.git</span> 命令</li>
+    <li>第五步：按下 Ctrl+Shift+P 再次执行 Go:Install/Update Tools 命令，在弹出的窗口全选并点击确定，这一次的安装都会SUCCESSED了</li>
+    <h3>Windows 安装 goland编辑器</h3>
+</div>

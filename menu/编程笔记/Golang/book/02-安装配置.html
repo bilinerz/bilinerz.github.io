@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="../css/golang.css">
+<div class="book-main">
+    <h2>安装GO</h2>
+    <h3>下载地址</h3>
+    <p>Go官网下载地址：<a href="https://golang.org/dl" target="_blank">https://golang.org/dl</a> (已被墙)</p>
+    <p>GO中文网下载地址：<a href="https://studygolang.com/dl" target="_blank">https://studygolang.com/dl</a></p>
+    <h3>Windows 安装</h3>
+    <p>下载 GO 压缩包</p>
+    <p>例如：go1.16.15.windows-amd64.zip</p>
+    <p>解压 go1.16.15.windows-amd64.zip 里面的 go目录，重命名为 go1.16.15 后放在自己想放的地方就可以</p>
+    <p>例如目录为：E:\Tools\go1.16.15</p>
+    <h3>设置 GO 环境变量</h3>
+    <p>打开系统变量: 右键“此电脑” ——> 属性 ——> 高级系统设置 ——> 环境变量</p>
+    <p>在系统变量拦: 点击“新建” ——> 变量名填 GOROOT ——> 变量值填GO的安装路径，例如 E:\Tools\go1.16.15</p>
+    <p>在自己想存放GO项目的地方新建一个文件夹名为 go_demo 例如目录为 E:\go_demo</p>
+    <p>在系统变量拦: 点击“新建” ——> 变量名填 GOPATH ——> 变量值填GO项目路径，例如 E:\go_demo</p>
+    <p>在系统变量拦双击打开 Path ——> 新建 ——> 填 %GOROOT%\bin</p>
+    <p>再点击“新建” ——> 填 %GOPATH%\bin</p>
+    <p>设置号环境变量后打开 CMD 输入“go version”可以查看当前Go版本</p>
+    <h3>开启 go module</h3>
+    <p>执行命令 <span style="color: white;background-color: black;">go env -w GO111MODULE=on</span></p>
+    <p>GO111MODULE，它可以设置以下三个值：off,on或者auto(默认)</p>
+    <li>如果<span style="color: orange;">GO111MODULE=off</span>，那么go命令行将不会使用新的module功能，相反的，它将会在vendor目录下和GOPATH目录中查找依赖包。也把这种模式叫GOPATH模式。</li>
+    <li>如果<span style="color: orange;">GO111MODULE=on</span>，那么go命令行就会使用modules功能，而不会访问GOPATH。也把这种模式称作module-aware模式，这种模式下，GOPATH不再在build时扮演导入的角色，但是尽管如此，它还是承担着存储下载依赖包的角色。它会将依赖包放在GOPATH/pkg/mod目录下。</li>
+    <li>如果<span style="color: orange;">GO111MODULE=auto</span>，这种模式是默认的模式，也就是说在你不设置的情况下，就是auto。这种情况下，go命令行会根据当前目录来决定是否启用module功能。只有当当前目录在GOPATH/src目录之外而且当前目录包含go.mod文件或者其子目录包含go.mod文件才会启用。</li>
+    <h3>设置GOPROXY</h3>
+    <p>默认GOPROXY配置是：GOPROXY=https://proxy.golang.org,direct 已经被墙在国内是访问不到的。</p>
+    <p>所以需要换一个PROXY，推荐使用https://goproxy.io 或 https://goproxy.cn。</p>
+    <p>执行命令 <span style="color: white;background-color: black;">go env -w GOPROXY=https://goproxy.cn,direct</span></p>
+    <h3>查看 GO 配置环境信息</h3>
+    <p>打开 CMD 输入 go env</p>
+    <br>
+</div>

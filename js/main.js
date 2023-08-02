@@ -1,4 +1,10 @@
 
+window.onload = function (){
+    get_day();
+    zy_img();
+}
+
+
 // 获取当前时间
 function get_day(){
     var t = new Date,    //获取当前shij
@@ -32,12 +38,6 @@ function zy_img(){
         }
     }
 }
-
-window.onload = function (){
-    get_day();
-    zy_img();
-}
-
 
 
 //显示的轮播图片下标

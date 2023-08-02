@@ -26,18 +26,3 @@ hr {margin: 30px 0 20px 0;}
 h2 {text-align: center;}
 .content p {text-indent: 2em;padding: 5px;}
 .name {text-align: center;}
-
-#zn{
-    text-align: center;
-    color: wheat;
-    width: 100px; height: 30px;
-    border: solid 1px;
-    margin: 0 auto;
-    padding-top: 5px;
-    border-radius: 10px;
-    background-color: rgb(74, 137, 197);
-    cursor: pointer;
-}
-#zn:hover{
-    background-color: rgb(228, 70, 149);
-}

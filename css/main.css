@@ -11,7 +11,7 @@ body{
 
 #header{
 	/* background-color: red; */
-	height: 160px;
+	height: 120px;
 	overflow:hidden;
 }
 
@@ -22,30 +22,54 @@ body{
 #logo img{
 	width: 200px;
 	margin: 50px 0px 0px 20px;
-
 }
 
 #nav{
-
+	/* width: 900px; */
+	height: 45px;
+	margin: 0 auto;
+	position: relative;
 }
-
-
-#nav li{
+.navUl > li{
 	float: left;
 	list-style-type: none;
+	text-align: center;
 	padding-right: 1px;
 }
-
-#nav li a{
+.navUl > li > a{
 	float: left;
 	color: black;
 	line-height:43px;
 	text-decoration:none;
-	padding:0px 37px 0px 36px;
 	background-color: gainsboro;
+	padding:0px 37px 0px 36px;
 }
+#nav > ul > li >a:hover{
+	background:skyblue;
+}
+#bc:hover>.erji{
+	display: block;
+}
+.erji{
+	z-index: 1;
+	width: 137px;
+	list-style-type: none;
+	background-color: rgba(220, 220, 220, 0.9);
+	text-align: center;
+	display: none;
+	position: absolute;
+	top: 45px;
 
-#nav li a:hover{
+}
+.erji li {
+	padding-bottom: 1px;
+}
+.erji > li > a{
+	color: black;
+	text-decoration:none;
+	line-height:43px;
+}
+.erji > li:hover{
 	background:skyblue;
 }
 
@@ -53,13 +77,11 @@ body{
 	margin-top: 10px;
 	height: 300px;
 }
-
 #new{
 	width: 590px;
 	height: 300px;
 	float: left;
 }
-
 #row_1{
 	width: 480px;
 	height: 300px;
@@ -68,14 +90,12 @@ body{
 	overflow: hidden;
 	position: relative;
 }
-
 #row_1 .inner a {
 	width: 100%;
 	height: 100%;
 
 	flex-shrink: 0;
 }
-
 #row_1 .inner{
 	height: 100%;
 	position: relative;
@@ -85,7 +105,6 @@ body{
 	 /* 过渡动画 1s */
 	 transition: all 1s;
 }
-
 #row_1 .inner img {
 	width: 100%;
 	height: 100%;
