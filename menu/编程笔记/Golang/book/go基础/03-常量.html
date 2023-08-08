@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>常量</h3>
+    <p>数值固定不变，程序运行不会被修改的量。</p>
+    <p>常量中的数据类型只可以是布尔型、数字型（整数型、浮点型和复数）和字符串型。</p>
+    <h3>常量的声明</h3>
+    <p>使用 const 关键字</p>
+    <p>声明格式：</p>
+    <p style="color: burlywood;">const 常量名 [数据类型] = 常量值</p>
+    <p> [数据类型]是可以省略的，因为编译器可以根据变量的值来推断其类型。</p>
+<pre class="prettyprint linenums">
+package main
+
+import "fmt" 
+
+const a string = "abc"  // 显式类型声明
+const b = "abc"    // 隐式类型声明
+
+const (
+    c = "张三"
+    d = "李四"
+)
+
+func main(){
+    fmt.Println(a, b, c, d)
+}
+</pre>
+<h3>自增常量 iota</h3>
+<p>有时候我们使用的常量只是为了区分东西，不关注这个东西该怎么命名，这时候就可以使用自增常量</p>
+<pre class="prettyprint linenums">
+const (
+    x1 = iota //0
+    x2        //1
+    x3        //2
+    ...
+    xn        //n
+)
+</pre>
+<br>
+</div>

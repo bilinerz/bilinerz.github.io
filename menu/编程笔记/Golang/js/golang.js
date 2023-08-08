@@ -1,11 +1,15 @@
 
-var one_menu = document.getElementsByClassName("one_menu");
-var two_menu = document.getElementsByClassName("two_menu");
-one_menu[0].onclick = function (){
-    if (two_menu[0].style.display == "none"){
-        two_menu[0].style.display = "block";
-    }else{
-        two_menu[0].style.display = "none";
-    }
-
+function menu(canshu1,canshu2){
+    var menu1 = document.getElementById(canshu1);
+	var menu2 = document.getElementById(canshu2);
+	
+	menu1.onclick = function(){
+        if (menu2.style.display == "none"){
+            menu2.style.display = "block";
+        }else{
+            menu2.style.display = "none";
+        }
+	}
 }
+menu("menu1_1","menu1_2");
+menu("menu2_1","menu2_2");

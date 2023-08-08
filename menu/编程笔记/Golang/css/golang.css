@@ -12,18 +12,22 @@
 #book_nav a{
     text-decoration: none;
 }
+#book_nav span:hover{
+    background-color: skyblue;
+}
 
-.two_menu{
+#menu1_2,#menu2_2{
     margin-top: 10px;
     display: none;
 }
-.two_menu a{
+#menu1_2 a,#menu2_2 a{
     margin-left: 20px;
     line-height: 25px;
 }
-.two_menu li{
+#menu1_2 li,#menu2_2 li{
     list-style-type: none;
 }
+
 .book-main{
     margin: 20px 0 0 20px;
 }

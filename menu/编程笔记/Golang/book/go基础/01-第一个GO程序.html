@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <p>1、进入GOPATH目录，新建一个目录名为hello</p>
+    <p>2、在终端cd到hello目录</p>
+    <p>3、执行命令 go mod init hello</p>
+    <p>4、在hello目录下新建一个文件名为 main.go</p>
+    <p>5、在 main.go 中写下如下代码</p>
+<pre class="prettyprint linenums">
+package main    // 声明 main 包
+
+import "fmt"    // 导入标准库 fmt
+
+func main(){    // main函数，程序执行的入口
+    fmt.Println("Hello World!")  // 打印 Hello World!
+}
+</pre>
+    <p>6、在hello目录下执行命令 go build 就会打印出 Hello World!</p>
+</div>

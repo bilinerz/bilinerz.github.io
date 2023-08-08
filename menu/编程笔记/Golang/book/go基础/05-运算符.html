@@ -1,0 +1,159 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>算术运算符</h3>
+    <p>加(+)、减(-)、乘(*)、除(/)、取余(%)、自增(++)、自减(--)</p>
+<pre class="prettyprint linenums">
+    a := 10
+    b := 3
+    sum := a + b
+    fmt.Printf("%d + %d = %d\n", a, b, sum)
+
+    sub := a - b
+    fmt.Printf("%d - %d = %d\n", a, b, sub)
+
+    mul := a * b
+    fmt.Printf("%d * %d = %d\n", a, b, mul)
+
+    div := a / b  //取商
+    fmt.Printf("%d / %d = %d\n", a, b, div)
+
+    mod := a % b  //取余
+    fmt.Printf("%d %% %d = %d\n", a, b, mod)
+
+    c := 3
+    c++  //给自己 +1
+    fmt.Println(c)
+
+    c--  //给自己 -1
+    fmt.Println(c)
+</pre>
+    <h3>关系运算符</h3>
+    <p>大于(>)、小于(<)、大于等于(>=)、小于等于(<=)、等等于(==)、不等于(!=)</p>
+    <p>==：表示比较两个数值是相等的</p>
+    <p>!=：表示比较两个数值是不相等的</p>
+    <p>运算之后返回的结果是 bool 类型：true 或 false</p>
+<pre class="prettyprint linenums">
+    a := 3
+    b := 5
+    c := 3
+    res1 := a > b
+    res2 := a < b
+    fmt.Printf("%T,%t\n", res1, res1)
+    fmt.Printf("%T,%t\n", res2, res2)
+
+    res3 := a == b
+    fmt.Println(res3)
+
+    res4 := a == c
+    fmt.Println(res4)
+
+    fmt.Println(a != b, a != c)
+</pre>
+    <h3>逻辑运算符</h3>
+    <p>操作数必须是bool，运算结果也是bool</p>
+    <p>与(&&)：所有为真，结果才为真，只要有一个为假，结果就为假</p>
+    <p>或(||)：所有为假，结果才为假，只要有一个为真，结果就为真</p>
+    <p>非(!)：取反</p>
+<pre class="prettyprint linenums">
+    b1 := true
+    b2 := false
+    b3 := true
+    b4 := false
+    res1 := b1 && b2
+    fmt.Printf("res1：%t\n", res1)
+
+    res2 := b1 && b3
+    fmt.Printf("res2：%t\n", res2)
+
+    res3 := b1 || b2
+    fmt.Printf("res3：%t\n", res3)
+
+    res4 := b2 || b4
+    fmt.Printf("res4：%t\n", res4)
+
+    fmt.Printf("b1=%t，!b1=%t\n", b1, !b1)
+    fmt.Printf("b2=%t，!b2=%t\n", b1, !b1)
+</pre>
+    <h3>位运算符</h3>
+    <p>将数值转换位二进制后按位操作</p>
+    <ul style="margin-left: 60px;">
+        <li>按位&：对应位的值如果都为1才为1，有一个为0就为0</li>
+        <li>按位|：对应的值如果都是0才为0，有一个为1就为1</li>
+        <li>
+            异位^：
+            <p>二元a^b：对应位的值不同为1，相同为0</p>
+            <p>一元^a：按位取反，比如a是1 ^a就是0</p>
+        </li>
+        <li>位清空&^</li>
+    </ul>
+<pre class="prettyprint linenums">
+    a := 60  //转成二进制是：111100 四位断开补零后 0011 1100
+    b := 13  //转成二进制是：1101   四位端口补零后 0000 1101
+    fmt.Printf("a的10进制：%d\na的二进制：%b\n", a, a)
+    fmt.Printf("b的10进制：%d\nb的二进制：%b\n", b, b)
+    /*
+    a: 60 0011 1100
+    b: 13 0000 1101
+    按位& 0000 1100
+    按位| 0011 1101
+    异位^ 0011 0001
+    */
+
+    res1 := a & b
+    fmt.Printf("res1的10进制：%d\nres1的二进制：%b\n", res1, res1)
+
+    res2 := a | b
+    fmt.Printf("res2的10进制：%d\nres2的二进制：%b\n", res2, res2)
+
+    res3 := a ^ b
+    fmt.Printf("res3的10进制：%d\nres3的二进制：%b\n", res3, res3)
+
+    /*
+    一元异位
+    a：0000 0000 ... 0011 1100
+   ^a：1111 1111 ... 1100 0011
+    */
+    res4 := ^a
+    fmt.Printf("res4的10进制：%d\nres4的二进制：%b\n", res4, res4)
+</pre>
+    <h3>位移运算符</h3>
+    <p><<：按位左移</p>
+    <p>>>：按位右移</p>
+<pre class="prettyprint linenums">
+    c := 8
+    res5 := c << 2
+    fmt.Println(res5)
+    res5 := c >> 2
+    fmt.Println(res6)
+</pre>
+    <h3>赋值运算符</h3>
+    <p>=、+=、*=、/=、%=、<<=、>>=、&=、|=、^= ...</p>
+    <ul style="margin-left: 60px;">
+        <li>等于(=)：把=右侧的数值赋值给=左边的变量</li>
+        <li>加等于(+=)：a += b 相当于 a = a + b</li>
+    </ul>
+<pre class="prettyprint linenums">
+    var a int
+    a = 3
+    fmt.Println(a)
+
+    a += 4  //a = a + 4
+    fmt.Println(a)  // 7
+
+    a -= 3  // 7-3
+    fmt.Println(a) //4
+
+    a *= 2  // 4*2
+    fmt.Println(a) //8
+
+    a /= 3 // 8/3
+    fmt.Println(a) //2
+
+    a %= 1 // 2%1
+    fmt.Println(a) //0
+</pre>
+<br>
+</div>

@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>switch语句</h3>
+    <p>Go里面的switch默认相当于每个case最后带有break，匹配成功后不会自动向下执行其他case，而是跳出整个switch</p>
+<pre class="prettyprint linenums">
+    /*语法结构
+    switch 变量名{
+    case 数值1: 分支1
+    case 数值2: 分支2
+    case 数值3: 分支3
+    ...
+    case 数值n: 分支n
+    default:
+        最后一个分支（一旦所有分支都不匹配就会执行最后分支）
+    }
+    */
+    num := 2
+    switch num {
+    case 1:
+        fmt.Println("第一季度")
+    case 2:
+        fmt.Println("第二季度")
+    case 3:
+        fmt.Println("第三季度")
+    case 4:
+        fmt.Println("第四季度")
+    default:
+        fmt.Println("数据错误")
+    }
+</pre>
+    <h3>switch其他写法</h3>
+    <p>省略switch后面的变量，相当于直接作用在true上</p>
+<pre class="prettyprint linenums">
+    switch{
+    case true:
+        fmt.Println("true")
+    case false:
+        fmt.Println("false")
+    }
+</pre>
+    <h3>switch小例子</h3>
+<pre class="prettyprint linenums">
+    /*
+    成绩：
+    [0-59]，不及格
+    [60-69]，及格
+    [70-79]，中
+    [80-89]，良好
+    [90-100],优秀
+    */
+    score := 88
+    switch {
+    case score >= 0 && score < 60:
+        fmt.Println(score, "不及格")
+    case score >= 60 && score < 70:
+        fmt.Println(score, "及格")
+    case score >= 70 && score < 80:
+        fmt.Println(score, "中等")
+    case score >= 80 && score < 90:
+        fmt.Println(score, "良好")
+    case score >= 90 && score <= 100:
+        fmt.Println(score, "优秀")
+    default:
+        fmt.Println("成绩有误！")
+    }
+</pre>
+<pre class="prettyprint linenums">
+    /*
+    一年中每个月的天数
+    31天：1、3、5、7、8、10、12
+    30天：4、6、9、11
+    二月：闰年(29天)，平年(28天)
+    判断那一年是闰年：能被400整除，能被4整除且不能被100整除的年份是闰年
+    */
+    year := 2023
+    month := 2
+    day := 0
+    switch month {
+    case 1, 3, 5, 7, 8, 10, 12:
+        day = 31
+    case 4, 6, 9, 11:
+        day = 30
+    case 2:
+        if year % 400 == 0 || year % 4 == 0 && year % 100 != 0 {
+            day = 29
+        } else {
+            day = 28
+        }
+    }
+    fmt.Printf("%d 年 %d 月 的天数是：%d\n", year, month, day)
+</pre>
+    <h3>switch中的 break 和 fallthrough</h3>
+    <p>break：强制结束case，意味着switch被强制结束</p>
+<pre class="prettyprint linenums">
+    n := 2
+    switch n {
+    case 1:
+        fmt.Println(1)
+        fmt.Println(1)
+        fmt.Println(1)
+    case 2:
+        fmt.Println(2)
+        fmt.Println(2)
+        break
+        fmt.Println(2)
+    }
+</pre>
+    <p>fallthrough：穿透case，switch中的某个case执行成功后如果该case有fallthrough下一个case无需匹配直接执行</p>
+<pre class="prettyprint linenums">
+    m := 1
+    switch n {
+    case 1:
+        fmt.Println(1)
+        fmt.Println(1)
+        fmt.Println(1)
+        fallthrough
+    case 2:
+        fmt.Println(2)
+        fmt.Println(2)
+        fmt.Println(2)
+    }
+</pre>
+<br>
+</div>

@@ -1,0 +1,164 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>基本数据类型</h3>
+    <li>
+        <b>布尔类型 bool</b>
+        <p style="margin-left: 30px;">取值： true，false</p>
+    </li>
+    <li>
+        <b>数值类型</b>
+        <ul style="margin-left: 30px;">
+            <p>整数：int</p>
+            <p>浮点：小数</p>
+            <p>复数</p>
+        </ul>
+    </li>
+    <li><b>字符串 string</b></li>
+    <br>
+    <h3>布尔类型</h3>
+<pre class="prettyprint linenums">
+package main
+
+import "fmt" 
+
+func main(){
+    //布尔类型
+    var b1 bool
+    b1 = true
+    fmt.Printf("b1的类型：%T，值为：%t\n", b1 , b1)
+    b2 := false
+    fmt.Printf("b2的类型：%T，值为：%t\n", b2 , b2)
+}
+</pre>
+<h3>数值类型</h3>
+<p>整数型</p>
+<ul style="margin-left: 60px;">
+    <p>有符号：最高位表示符号位，0整数，1负数，其余位表示数值</p>
+    <li>
+        int8
+        <p>有符号 8 位整型，取值范围(-128 到 127)</p>
+        <p>长度：8bit</p>
+    </li>
+    <li>
+        int16
+        <p>有符号 16 位整型，取值范围(-32768 到 32767)</p>
+    </li>
+    <li>
+        int32
+        <p>有符号 32 位整型，取值范围(-2147483648 到 2147483647)</p>
+    </li>
+    <li>
+        int64
+        <p>有符号 64 位整型，取值范围(-9223372036854775808 到 9223372036854775807)</p>
+    </li>
+    <p>无符号：所有的位表示数值</p>
+    <li>
+        uint8
+        <p>无符号 8 位整型，取值范围(0 到 255)</p>
+        <p>8位都用于表示数值</p>
+    </li>
+    <li>
+        uint16
+        <p>无符号 16 位整型，取值范围(0 到 65535)</p>
+    </li>
+    <li>
+        uint32
+        <p>无符号 32 位整型，取值范围(0 到 4294967295)</p>
+    </li>
+    <li>
+        uint64
+        <p>无符号 64 位整型，取值范围(0 到 18446744073709551615)</p>
+    </li>
+    <li>
+        <p>byte：相对于 uint8</p>
+        <p>rune：相当于 int32</p>
+    </li>
+</ul>
+<p>int和uint：根据底层平台，表示32或64位整数。除非需要使用特定大小的整数，否则通常使用int来表示整数。</p>
+<pre class="prettyprint linenums">
+    //整数
+    var i1 int8
+    i1 = 100
+    fmt.Println(i1)
+    var i2 uint8
+    i2 = 200
+    fmt.Println(i2)
+
+    var i3 int
+    i3 = 1000
+    fmt.Println(i3)
+
+    var (
+        i4 uint8
+        i5 byte
+    )
+    i4 = 100
+    i5 = i4
+    fmt.Println(i4, i5)
+
+    //不指定类型，那么默认是 int
+    var i6 = 100
+    fmt.Printf("%T,%d\n", i6, i6)
+</pre>
+<h3>浮点类型</h3>
+<ul style="margin-left: 60px;">
+    <li>
+        float32
+        <p>IEEE-754 32位浮点型数</p>
+    </li>
+    <li>
+        float64
+        <p>IEEE-754 64位浮点型数</p>
+    </li>
+</ul>
+<pre class="prettyprint linenums">
+    //浮点
+    var f1 float32
+    f1 = 3.14
+    var f2 float64
+    f2 = 4.67
+    fmt.Printf("%T,%f\n", f1, f1) //打印输出默认保留小数点后6位
+    fmt.Printf("%T,%.2f\n", f1, f1) //打印输保留小数点后2位
+    fmt.Printf("%T,%f\n", f2, f2)
+</pre>
+<h3>字符串</h3>
+    <p>多个byte的集合，也可理解为一个字符序列</p>
+<pre class="prettyprint linenums">
+    //定义字符串
+    var s1 string
+    s1 = "张三"
+    fmt.Printf("%T, %s\n", s1, s1)
+
+    s2 := `Hello World`
+    fmt.Printf("%T, %s\n", s2, s2)
+
+    //单引号'' 和 双引号"" 的区别
+    v1 := 'A'
+    v2 := "A"
+    fmt.Printf("%T, %d\n", v1, v1) //打印出 int32 类型
+    fmt.Printf("%T, %s\n", v2, v2) //打印出 string 类型
+</pre>
+<h3>数据类型转换</h3>
+    <p>go语言在定义、赋值和运算时数据类型必须一致</p>
+    <p>在转换数据类型时只有兼容类型可以转换</p>
+    <p>常量：在有需要的时候自动转换</p>
+    <p>变量：需要手动转换</p>
+<pre class="prettyprint linenums">
+    var a int8
+    a = 10
+
+    var b int16
+    b = int16(a)  //将a转换为int16才能赋值给b
+
+    fmt.Println(a, b)
+
+    f1 := 3.14
+    var c int
+    c = int(f1)  //将f1转换为int才能赋值给c
+    fmt.Println(f1, c)
+</pre>
+<br>
+</div>

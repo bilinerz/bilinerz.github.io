@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>变量</h3>
+    <p>声明变量会开辟一块小内存，用于存储数据，在程序运行过程是可以被改变的</p>
+    <h3>变量的声明</h3>
+    <li>使用 var 关键字</li>
+    <li>使用 := </li>
+<pre class="prettyprint linenums">
+package main
+
+import "fmt" 
+
+func main(){
+    //使用 var 关键字，一般用于声明全局变量
+    var a string  //声明变量 a 类型为 string
+    a = "Hello World!"  //给变量 a 赋值
+    fmt.Println(a)  //打印输出变量a
+
+    var b int   //声明变量 b 类型为 int
+    fmt.Println(b)
+
+    var c = 20  //省略后面的数据类型,自动匹配类型
+    fmt.Println(c)
+
+    //使用 := 省略了var关键字，:= 左边必须是未声明过的变量，这种不带声明格式的只能在函数体内使用
+    d := 1
+    fmt.Printf("d 的类型是%T，d=%d\n", d, d)
+
+    //多变量声明
+    var e, f = 1, 2
+    g, h := "张三", "李四"
+    fmt.Println(e, f, g, h)
+}
+</pre>
+<br>
+</div>

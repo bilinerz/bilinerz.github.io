@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>if语句</h3>
+    <pre class="prettyprint linenums">
+        /*语法格式
+        if 条件表达式{
+            
+        }
+        */
+
+        //例如：给定一个数字，如果大于10则打印大于10
+        num := 12
+        if num > 10 {
+            fmt.Println("大于10")
+        } 
+        fmt.Println("程序结束")
+    </pre>
+
+    <h3>if else 语句</h3>
+    <pre class="prettyprint linenums">
+        /*语法格式
+        if 条件表达式{
+            
+        } else {
+
+        }
+        */
+
+        //例如：给定一个数字，如果大于10则打印大于10否则打印小于10
+        num := 12
+        if num > 10 {
+            fmt.Println("大于10")
+        } else {
+            fmt.Println("小于10")
+        }
+
+        fmt.Println("程序结束")
+    </pre>
+
+    <h3>if嵌套</h3>
+    <pre class="prettyprint linenums">
+        //例如：给定一个数字，如果等于10则打印该数值，大于10则打印大于10，否则打印小于10
+        num := 12
+        if mun == 10 {
+            fmt.Println(num)
+        } else {
+            if num > 10 {
+                fmt.Println("大于10")
+            } else {
+                fmt.Println("小于10")
+            }
+        }
+        fmt.Println("程序结束")
+
+        //嵌套简写
+        if mun == 10 {
+            fmt.Println(num)
+        } else if mun > 10 {
+            fmt.Println("大于10")
+        } else {
+            fmt.Println("小于10")
+        }
+    </pre>
+
+    <h3>if语句其他写法</h3>
+    <pre class="prettyprint linenums">
+        /*语法结构
+        if 初始化语句; 条件 {
+
+        }
+        */
+        if num := 12; num = 10 {
+            fmt.Println(num)
+        } else if mun > 10 {
+            fmt.Println("大于10")
+        } else {
+            fmt.Println("小于10")
+        }
+    </pre>
+</div>
