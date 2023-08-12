@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>for循环</h3>
+    <p>某些时候需要重复多次执行相同的操作时可以使用for循环</p>
+<pre class="prettyprint linenums">
+    //循环打印5次 Hello World
+    for i := 0; i < 5; i++ {
+        fmt.Println("Hello World")
+    }
+</pre>
+    <h3>for循环其它写法</h3>
+<pre class="prettyprint linenums">
+    i := 0
+    for i < 5 {
+        fmt.Println(i)
+        i++
+    }
+    fmt.Println("i——>", i)
+
+    //死循环
+    for{
+        fmt.Println("i——>", i)
+        i++
+    }
+</pre>
+    <h3>for循环练习</h3>
+<pre class="prettyprint linenums">
+    //练习1：打印66-22的数字
+    for i := 66; i >= 22; i-- {
+        fmt.Println(i)
+    }
+
+    fmt.Println("------------------")
+
+    //练习2：求1-100的和
+    sum := 0
+    for i := 1; i <= 100; i++ {
+        sum += i
+    }
+    fmt.Println("1-100的和：", sum)
+</pre>
+    <h3>for循环嵌套</h3>
+<pre class="prettyprint linenums">
+    /*
+    使用for循环嵌套打印乘法表
+    1 X 1 = 1
+    1 X 2 = 2  2 X 2 = 4
+    ...        ...
+    1 X 9 = 9  2 x 9 = 18 ... 9 x 9 = 81
+    */
+    for i := 1; i < 10; i++ {
+        for j := 1; j <= i; j++ {
+            fmt.Printf("%d x %d = %d\t", j, i, j * j)
+        }
+        fmt.Println()
+    }
+</pre>
+    <h3>break 和 continue</h3>
+    <p>break：结束循环</p>
+    <p>continue：跳出一次循环</p>
+<pre class="prettyprint linenums">
+    //本来打印1-10但是到5的时候break结束了循环，只打印了1-4
+    for i := 1; i <= 10; i++{
+        if i == 5 {
+            break
+        }
+        fmt.Println(i)
+    }
+
+    //本来打印1-10但是到5的时候continue跳出了循环，除了5不打印其它都打印
+    for i := 1; i <= 10; i++{
+        if i == 5 {
+            continue
+        }
+        fmt.Println(i)
+    }
+</pre>
+</div>

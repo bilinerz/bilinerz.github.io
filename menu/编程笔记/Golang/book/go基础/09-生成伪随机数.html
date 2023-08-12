@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>生成伪随机数</h3>
+    <p>根据一定的算法公式算出来的</p>
+<pre class="prettyprint linenums">
+    //生成随机整数，由于默认种子是一样的，每次生成的随机数都是一样的
+    num1 := rand.Int()
+    fmt.Println(num1)
+
+    //生成10个随机数
+    for i := 0; i < 10; i++ {
+        num := rand.Intn(10)  //0-9之间的数值
+        fmt.Println(num)
+    }
+
+    //设固定种子数
+    rand.Seed(22)
+    num2 := rand.Intn(10)
+    fmt.Println("num2 = ", num2)
+
+    //时间是变化的可以用来做种子数使每次生成的数字都是随机的
+    //当前时间
+    t1 := time.Now()
+    fmt.Println(t1)
+
+    //当前时间转为int64位的时间戳
+    time1 := t1.Unix()  //获取到秒
+    fmt.Println(time1)
+
+    time2 := t1.UnixNano //获取到纳秒
+    fmt.Println(time2)
+
+    //使用时间戳作为种子数
+    rand.Seed(time.Now())
+    //生成10个0-9的随机数
+    for i := 0; i < 10; i++{
+        num3 := rand.Intn(10)
+        fmt.Println(num3)
+    }
+
+    //如果要获取15到86范围内的随机数,可以用 86-15=71 取值范围就是 Intn(72)+15
+    num4 := rand.Intn(72) + 15
+    fmt.Println(num4)
+</pre>
+</div>
