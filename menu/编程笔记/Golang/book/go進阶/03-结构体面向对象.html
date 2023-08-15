@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>结构体面向对象</h3>
+    <p>通过结构体嵌套和匿名字段来实现面向对象</p>
+<pre class="prettyprint linenums">
+    //定义父结构体
+    type Person struct {
+        name string
+        age int
+    }
+
+    //定义子结构体
+    type Student struct {
+        Person //通过匿名字段继承父结构体
+        school string
+    }
+
+    func main() {
+        zhangSan := Student{
+            Person{
+                name:"张三",
+                age:18,
+            },
+            school:"XX大学",
+        }
+        fmt.Println(zhangSan)
+
+        //获取对应数据
+        fmt.Println(zhangSan.name, zhangSan.age, zhangSan.school)
+    }
+</pre>
+</div>

@@ -13,3 +13,4 @@ function menu(canshu1,canshu2){
 }
 menu("menu1_1","menu1_2");
 menu("menu2_1","menu2_2");
+menu("menu3_1","menu3_2");

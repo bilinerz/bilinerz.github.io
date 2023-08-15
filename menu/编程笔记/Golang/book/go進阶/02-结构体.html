@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>结构体</h3>
+    <p>数组可以存储相同类型的数据，而结构体则可以定义不同类型的数据</p>
+<pre class="prettyprint linenums">
+    //定义一个人的结构体
+    type Person struct {
+        name    string  //姓名
+        age     int     //年龄
+        sex     string  //性别
+        address string  //地址
+    }
+
+    func main() {
+        //调用结构体方法一
+        var p1 Person
+        //向结构体赋值
+        p1.name = "张三"
+        p1.age = 20
+        p1.sex = "男"
+        p1.address = "罗刹海市"
+        fmt.Printf("姓名：%s，年龄：%d，性别：%s，地址：%s\n", p1.name, p1.age, p1.sex, p1.address)
+
+        //调用结构体方法二
+        p2 := Person{}
+        //向结构体赋值
+        p2.name = "李四"
+        p2.age = 21
+        p2.sex = "男"
+        p2.address = "罗刹海市"
+        fmt.Printf("姓名：%s，年龄：%d，性别：%s，地址：%s\n", p2.name, p2.age, p2.sex, p2.address)
+
+        //调用结构体方法三
+        p3 := Person{
+            name:"王五",
+            age:22,
+            sex:"男",
+            address:"罗刹海市",
+        }
+        fmt.Println(p3)
+
+        //结构体指针
+        p4 := *Person
+        p4 = &p1  //将p1的地址赋值给p4
+        fmt.Println(p4) //打印p4就可以打印p1的值
+        p4.name = "赵六" //修改p4的name值就会修改p1的name值
+        fmt.Println(p1)
+
+        //使用内置函数new()创建指针结构体
+        p5 := new(Person)
+        fmt.Printf("p5的数据类型：%T\n", p5)
+        p5 := &p2
+        fmt.Println(p5)
+
+        //匿名结构体
+        p6 := struct{
+            name string
+            age int
+        }{
+            name:"胡七",
+            age:25,
+        }
+        fnt.Println(p6)
+
+        //结构体匿名字段
+        type Person2 struct {
+            string  //匿名字段默认使用数据类型作为名字，所有数据类型不能重复，否则会冲突
+            int
+        }
+
+        p7 := Person2{"猴八", 28}
+        fmt.Println(p7)
+        fmt.Println(p7.string, p7.int)
+    }
+</pre>
+    <h3>结构体嵌套</h3>
+<pre class="prettyprint linenums">
+    //定义书的结构体
+    type Book struct {
+        bookName string
+        price float64
+    }
+
+    //定义学生的结构体
+    type Student struct {
+        name string
+        age int
+        book Book
+    }
+
+    //嵌套指针结构体
+    type Student2 struct {
+        name string
+        age int
+        book *Book
+    }
+
+    func main(){
+        b1 := Book{}
+        b1.bookName = "西游记"
+        b1.price = 45.8
+
+        s1 := Student{}
+        s1.name = "张三"
+        s1.age = 16
+        s1.book = b1
+        fmt.Println(b1)
+        fmt.Println(s1)
+
+        fmt.Printf("姓名：%s，年龄：%d，选择的书：《%s》，书的价格：%f\n", s1.name, s1.age, s1,book.bookName, s1.book.price)
+
+        b2 := Book{bookName:"三国演义", price:58.8}
+        s2 := Student2{name:"李四", age:18, book:&b2}  //book 存储b2的地址
+        fmt.Println(b2)
+        fmt.Println(s2)
+
+        s2.book.bookName = "红楼梦"  //通过地址改变了b2的bookName值
+        fmt.Println(b2)
+    }
+</pre>
+</div>

@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>集合 Map</h3>
+    <p>Map 是一种无序的键值对集合，一个键对应一个值，通过键可以索引值</p>
+    <p>var map名 map[键的数据类型]值的数据类型</p>
+    <p>var map名 = make(map[键的数据类型]值的数据类型]</p>
+<pre class="prettyprint linenums">
+    //创建map
+    var map1 map[int]string  //只是声明了一个map不能直接使用还要make一下
+    fmt.Println(map1)
+    map2 := make(map[int]string)
+    fmt.Println(map2)
+    var map3 = map[int]string{1:"张三", 2:"李四", 3:"王五"}
+    fmt.Println(map3)
+
+    //给map2添加数据
+    map2[1] = "GO"
+    map2[2] = "python"
+    map2[3] = "java"
+    map2[4] = "php"
+    map2[5] = "html"
+    fmt.Println(map2)
+
+    //从map2获取指定数据
+    fmt.Println(map2[1])
+
+    //通过键获取值时通过返回值可以判断键是否存在
+    v, ok := map2[100]
+    if ok {
+        fmt.Println("map2[100]对应的值是：", v)
+    } else {
+        fmt.Println("key不存在：", v)
+    }
+
+    //根据key删除map2中的数据
+    delete(map2, 3)
+    fmt.Println(map2)
+
+    //通过 for range 遍历 map 获取map中的所有数据
+    for k, v := range map2 {
+        fmr.Println(k, v)
+    }
+
+</pre>
+</div>

@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>指针</h3>
+    <p>指针也是变量，存储的是其它变量的内存地址</p>
+<pre class="prettyprint linenums">
+    a := 10
+    //使用 & 符号获取变量的内存地址
+    fmt.Printf("a的内存地址：%p\n", &a)
+
+    //创建一个指针变量，用于存储变量a的地址
+    var p1 *int
+    fmt.Println(p1)  //空指针
+    p1 = &a //向p1空指针存储a的内存地址
+    fmt.Println("p1的值：", p1)
+    fmt.Printf("p1的内存地址：%p\n", &p1)
+    fmt.Println("通过指针p1存储的a地址，获取到a的值为：", *p1)
+
+    //通过指针修改变量的值
+    *p1 = 100
+    fmt.Println(a)
+
+    //存储指针
+    var p2 **int
+    p2 = &p1 //指针p2存储指针p1
+    fmt.Println("p2的值：", p2)
+    fmt.Println("通过指针p2存储的p1指针地址，获取到a的值为：", **p2)
+</pre>
+    <h3>数组指针</h3>
+<pre class="prettyprint linenums">
+    //创建一个普通数组
+    arr1 := [3]int{1, 2, 3}
+    fmt.Println(arr1)
+
+    //创建一个指针，存储arr1数组的地址
+    var p1 *[3]int
+    p1 = &arr1
+    fmt.Println(p1)
+
+    //通过数组指针，修改数组arr1中的元素
+    p1[0] = 100
+    fmt.Println(arr1)
+
+    //指针数组
+    a := 1
+    b := 2
+    c := 3
+    arr2 := [3]*int{&a, &b, &c}
+    fmt.Println(arr2)
+    *arr2[0] = 100 //修改a的值
+    fmt.Println(a)
+</pre>
+<br>
+</div>

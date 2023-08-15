@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>切片slice</h3>
+    <p>与数组类似，也叫动态数组</p>
+    <p>语法： var 切片名 []数据类型</p>
+<pre class="prettyprint linenums">
+    //定义切片
+    var s1 []int
+    fmt.Println(s1)
+
+    s2 := []int{1, 2, 3}
+    fmt.Println(s2)
+
+    //使用make定义切片
+    s3 := make([]string, 3, 5)  //数据类型为string，长度为3，容量为5
+    fmt.Printf("s3长度:%d，容量:%d\n", len(s3), cap(s3))
+
+    //给s3切片赋值
+    s3[0] = "张三"
+    s3[1] = "李四"
+    s3[2] = "王五"
+    fmt.Println(s3)
+
+    //使用 append() 在切片末尾追加数据
+    s3 = append(s3, "赵六", "胡七")
+    fmt.Println(s3)
+
+    s4 := make([]string,10)
+    s4[0] = "猴八"
+    //将 s3切片中的元素追加到 s4中，要在s3切片后面加三个点表示追加s3里的元素
+    s4 = append(s4, s3...)
+    fmt.Println(s4)
+
+    //获取指定范围的切片
+    s5 := s4[2:5]
+    fmt.Println(s5)
+
+    //使用for循环遍历切片
+    for i := 0; i < len(s4); i++ {
+        fmt.Println(s4[i])
+    }
+
+    fmt.Println("---------------")
+
+    //使用 for range 遍历切片
+    for i, v := range s4 {
+        fmt.Printf("下标为:%d，数值是:%d\n", i, v)
+    }
+</pre>
+</div>
