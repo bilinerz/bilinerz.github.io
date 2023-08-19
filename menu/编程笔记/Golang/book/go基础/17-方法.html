@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>方法</h3>
+    <p>方法也是函数，只是方法中还有接收者，是该接收者的功能集合，只有收者才可以调用</p>
+    <p>语法：func (接收者) 方法名(参数)(返回值){ }</p>
+<pre class="prettyprint linenums">
+    //定义一个人的结构体
+    type Person struct {
+        name string
+        age int
+        sex string
+    }
+
+    func main() {
+        //调用结构体
+        zhangSan := Person{name:"张三", age:18, sex:"男"}
+        //调用结构体下的work方法
+        zhangSan.work()
+
+        //取地址
+        liSi := &Person{name:"李四", age:20, sex:"男"}
+
+    }
+
+    //定义一个work方法
+    func (p Person) work() {
+        fmt.Println(p.name, "正在工作...")
+    }
+
+    //定义一个rest方法，取的是地址
+    func (p1 *Person) rest() {
+        fmt.Println(p1.name, "正在休息...")
+    }
+</pre>
+    <h3>方法的继承</h3>
+<pre class="prettyprint linenums">
+    //定义一个父结构体
+    type Person struct {
+        name string
+        age int
+    }
+
+    //定义一个子结构体
+    type Student struct {
+        Person  //结构体嵌套，模拟继承
+        school string
+    }
+
+    //定义一个父结构体的方法
+    func (p Person) eat() {
+        fmt.Println("父类的eat方法")
+    }
+
+    //定义一个子结构体的方法
+    func (s Student) study() {
+        fmt.Println("子类自己的方法")
+    }
+
+    //子结构体重新eat方法
+    func (s Student) eat() {
+        fmt.Println("子结构体重写的eat方法")
+    }
+
+    func main() {
+        //创建父结构对象
+        p1 := Person{name:"张三", age:20}
+        fmt.Println(p1.name, p1.age)  //父结构体对象，访问父结构体的属性
+        p1.eat()  //父结构体对象，调用父结构体中的eat方法
+
+        //创建子结构体对象
+        s1 := Student{Person{"李四", 19}, "XXx学校"}
+        fmt.Println(s1.name, s1.age)  //子结构体对象直接访问父结构体的属性
+        fmt.Println(s1.school)  //子结构体对象访问自己属性
+        s1.eat()  //子结构体对象直接访问父结构体的eat方法
+        s1.study()  //子结构体对象调用自己的结构体中的方法
+        s1.eat()  //调用子结构体重写的eat方法
+    }
+</pre>
+<br>
+</div>

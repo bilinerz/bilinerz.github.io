@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>strconv包的使用</h3>
+    <p>主要用于字符串和基本类型之间的转换</p>
+<pre class="prettyprint linenums">
+    //ParseBool：将字符串转换为 bool类型
+    s := "true"
+    b1, err := strconv.ParesBool(s1)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    fmt.Printf("b1的类型：%T，b1的值：%t\n", b1, b1)
+
+    //FormatBool：将布尔类型转换为字符串
+    s0 := strconv.FormatBool(b1)
+    fmt.Printf("s0的类型：%T，s0的值：%s\n", s0, s0)
+
+    //ParseInt：将字符串转换为整数
+    s1 := "100"
+    i1, err := strconv.ParseInt(s1, 10, 64)  //转为10进制，64位的整数
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    fmt.Printf("i1的类型：%T，i1的值：%d\n", i1, i1)
+
+    //FormatInt：将整数转换为字符串
+    s2 := strconv.FormatInt(i1, 10)  //将10进制整数转换为字符串
+    fmt.Printf("s2的类型：%T，s2的值：%s\n", s2, s2)
+
+    //一般字符串和整数之间的转换用的是 itoa() 和 atoi()
+    i2, _ := strconv.Atoi("200")  //字符串转为int类型
+    fmt.Printf("i2的类型：%T，i2的值：%d\n", i2, i2)
+
+    s3 := strconv.Itoa(200)  //int类型转换为string
+    fmt.Printf("s3的类型：%T，s3的值：%d\n", s3, s3)
+</pre>
+<br>
+</div>
