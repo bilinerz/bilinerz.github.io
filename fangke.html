@@ -5,26 +5,34 @@
 		<title>访问量</title>
 	</head>
 	<body>
-		<p>
-			<span id="url"></span> 访问量：<span id="shuliang"></span>
-		</p>
+		<div>
+			URL：<input type="text" id="urlInfo">&nbsp;
+			<input type="button" class="btn" value="查询" onclick='getNum()' />
+		</div>
+		<p id="url"></p>
+		<p id="shuliang"></p>
 	</body>
 </html>
 <script src="js/myajax.js"></script>
 <script type="text/javascript">
-	setTimeout(function(){
-		myAjax({
-			type:'get',
-			url:'https://tv.kanzx.eu.org/fangke/fangke.php',
-			data:{
-				url:'bilinerz.github.io',
-				info:0
-			},
-			success:function(data){
-				console.log(data);
-				document.getElementById('url').innerHTML=data.url;
-				document.getElementById('shuliang').innerHTML=data.shuliang;
-			}
-		});
-	}, 200);
+	var urlInfo = document.getElementById("urlInfo");
+	function getNum(){
+		if (!urlInfo.value){
+			alert("URL 不能为空");
+		} else {
+			myAjax({
+				type:'get',
+				url:'https://bilinerz.eu.org/fangke/fangke.php',
+				data:{
+					url:urlInfo.value,
+					info:0
+				},
+				success:function(data){
+					console.log(data);
+					document.getElementById('url').innerHTML="url：" + data.url;
+					document.getElementById('shuliang').innerHTML="访问量：" + data.shuliang;
+				}
+			});
+		}
+	};
 </script>
