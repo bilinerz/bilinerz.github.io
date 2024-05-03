@@ -124,10 +124,21 @@
     <p>>>：按位右移</p>
 <pre class="prettyprint linenums">
     c := 8
-    res5 := c << 2
-    fmt.Println(res5)
-    res5 := c >> 2
-    fmt.Println(res6)
+    c1 := c << 1
+    fmt.Println(c1)  //结果为：16  相当于 8乘以2的1次方
+    c2 := c << 2
+    fmt.Println(c2)  //结果为：32  相当于 8乘以2的2次方
+    c3 := c << 3
+    fmt.Println(c3)  //结果为：68  相当于 8乘以2的3次方
+    //结论：左位移多少位相当于乘以2的多少次方
+
+    cc1 := c >> 1
+    fmt.Println(cc1)  //结果为：4 相当于 8除以2的1次方
+    cc2 := c >> 2
+    fmt.Println(cc2) //结果为：2  相当于 8除以2的2次方
+    cc3 := c >> 3
+    fmt.Println(cc3) //结果为：1  相当于 8除以2的3次方
+    //结论：右位移多少位相当于除以2的多少次方
 </pre>
     <h3>赋值运算符</h3>
     <p>=、+=、*=、/=、%=、<<=、>>=、&=、|=、^= ...</p>

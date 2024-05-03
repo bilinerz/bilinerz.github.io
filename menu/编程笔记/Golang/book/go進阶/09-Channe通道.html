@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+<h3>Channe 通道</h3>
+<p>go中的通道是go协程之间的通道，可以让协程之间相互通信。</p>
+<p>每个通道都有与其相关的类型。该类型是通道允许传输的数据类型。</p>
+<h3>通道的声明</h3>
+<p>通道的声明与定义一个变量的语法一样</p>
+<p>var 通道名 chan 通道类型</p>
+<p>通道名 = make(chan 数据类型)</p>
+<pre class="prettyprint linenums">
+var a chan int  //创建一个int类型的通道
+fmt.Printf("%T,%v\n",a,a)
+
+//nil的通道是不能使用的，判断一下通道是否可用
+if a  == nil{
+    fmt.Println("channel是nil，不能使用，需要先创建通道。")
+    a = make(chan int)
+    fmt.Println(a)
+}
+</pre>
+<h3>通道的使用</h3>
+<pre class="prettyprint linenums">
+/*发送和接收
+data := <- a //表示从通道a读取数据赋值给data
+a <- data //表示向通道a写入数据data
+*/
+
+//小例子，使用通道防止子协程还没执行完，主协程退出导致子协程被关闭
+func main() {
+    //声明一个通道
+    var ch1 chan bool
+    //创建通道
+    ch1 = make(chan bool)
+
+    //创建一个匿名子协程
+    go func() {
+        for i := 0; i < 10; i++ {
+            fmt.Println("子协程中的 i:", i)
+        }
+        //向通道写入数据，表示子协程要结束了
+        ch1 <- true
+        fmt.Println("子协程结束")
+    }()
+    
+    //主协程收通道数据，阻塞接等待子协程往通道写入数据
+    data := <- ch1
+    fmt.Println("main函数从通道读取到的数据：", data)
+    fmt.Println("main函数结束")
+}
+</pre>
+<h3>通道的关闭例子</h3>
+<p>子协程循环写出10个数据，每写一个会阻塞一次，主协程读取后解除阻塞。</p>
+<p>主协程每次读取数据阻塞一次，子协程写出数据解除阻塞。</p>
+<pre class="prettyprint linenums">
+package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func main() {
+    //创建通道
+    ch1 := make(chan int)
+    //启动子协程
+    go sendData(ch1)
+
+    //读取通道的数据
+    for{
+        time.Sleep(1*time.Second)
+        v, ok := <- ch1  //如果通道关闭 ok 变量为fales
+        if !ok{
+            fmt.Println("已经读取了所有的数据。。",ok,v)
+            break
+    }
+
+    fmt.Println("读取的数据：",v,ok)
+    }
+
+    fmt.Println("main函数结束...")
+}
+
+func sendData(ch1 chan int){
+    //发送方：10条数据
+    for i := 0; i < 10; i++ {
+        ch1 <- i //将i写入到通道中
+        // 0 1  .. 9
+    }
+    close(ch1) //将ch1通道关闭
+}
+</pre>
+<p>使用 range 方式循环读取通道数据</p>
+<pre class="prettyprint linenums">
+func main() {
+    ch1 := make(chan int)
+    go sendData(ch1)
+    //for循环的for range，来访问通道
+    for v := range ch1{ // v <- ch1
+        fmt.Println("读取数据：",v)
+    }
+    fmt.Println("main函数结束...")
+}
+func sendData(ch1 chan int){
+    for i := 0; i < 10; i++ {
+        time.Sleep(1* time.Second)
+        ch1 <- i // 0 1...9
+    }
+    close(ch1)//通道关闭
+}
+</pre>
+</div>

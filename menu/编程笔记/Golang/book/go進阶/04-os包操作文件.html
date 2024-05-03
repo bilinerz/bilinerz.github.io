@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+<h3>使用os.Stat()来获取文件信息</h3>
+<pre class="prettyprint linenums">
+    //使用os.Stat()来获取文件信息 FileInfo
+    fileInfo, err := os.Stat("文件路径")
+    if err != nil {
+        fmt.Println("获取文件失败：", err)
+        return
+    }
+
+    fmt.Println(fileInfo.Name()) //获取名称
+	fmt.Println(fileInfo.Size()) //获取大小
+	fmt.Println(fileInfo.IsDir()) //判断是不是目录
+	fmt.Println(fileInfo.ModTime()) //获取修改的时间
+	fmt.Println(fileInfo.Mode()) //获取权限
+</pre>
+<h3>使用OS包创建目录</h3>
+<pre class="prettyprint linenums">
+    //创建一层目录
+    err := os.Mkdir("user/a", 权限) //权限可以填 os.ModePerm
+    if err != nil {
+        fmt.Println("创建目录失败：", err)
+        return
+    }
+
+    //创建多层目录
+    err := os.MkdirAll("user/a/b/c", 权限) //权限可以填 os.ModePerm
+    if err != nil {
+        fmt.Println("创建目录失败：", err)
+        return
+    }
+</pre>
+<h3>使用OS包创建文件</h3>
+<pre class="prettyprint linenums">
+    //Create采用模式0666（任何人都可读写但不可执行），创建文件时如果已存在会重新创建为空文件
+    file, err := os.Create("user/a/a.txt")
+    if err != nil {
+        fmt.Println("创建文件失败：", err)
+        return
+    }
+</pre>
+<h3>使用OS包打开文件</h3>
+<pre class="prettyprint linenums">
+    /*文件打开模式
+        O_RDONLY int = syscall.O_RDONLY  //只读模式
+        O_WRONLY int = syscall.O_WRONLY  //只写模式
+        O_RDWR   int = syscall.O_RDWR    //读写模式
+    
+    */
+    //Open方式打开文件是只读模式
+    file1, err := os.Open("user/a/a.txt")
+    if err != nil {
+        fmt.Println("打开文件失败：", err)
+        return
+    }
+    defer file1.Close()
+
+    //OpenFile方式打开文件可以设置模式，可读可写
+    file2, err := os.OpenFile("user/a/b.txt", os.O_RDONLY|os.O_WRONLY, os.ModePerm)
+    if err != nil {
+        fmt.Println("打开文件失败：", err)
+        return
+    }
+    defer file2.Close()
+</pre>
+<h3>使用OS包删除文件和目录</h3>
+<pre class="prettyprint linenums">
+    //删除文件
+    err := os.Remove("user/a/b.txt")
+    if err != nil {
+        fmt.Println("删除文件失败：", err)
+        return
+    }
+
+    //删除目录
+    err := os.RemoveAll("user/a")
+    if err != nil {
+        fmt.Println("删除目录失败：", err)
+        return
+    }
+</pre>
+</div>

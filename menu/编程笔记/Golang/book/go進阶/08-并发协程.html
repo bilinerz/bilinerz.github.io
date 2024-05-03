@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+<h3>Corcutine 协程</h3>
+<p>相较于进程和线程，协程的最大优势在于可以轻松创建上百万个而不会导致系统资源衰竭，而进程和线程通常最多也不超过1万个。</p>
+<h3>Go中的协程 Goroutines</h3>
+<p>main 函数相当于主goroutine，在main函数中调用的goroutine是子goroutine</p>
+<p>使用 go 关键字加上一个函数就可以启动goroutine</p>
+<pre class="prettyprint linenums">
+package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func main() {
+    /*
+        子协程打印数字，主协程打印字母，观察运行结果。。
+
+        并发的程序的运行结果，每次都不一定相同。
+        不同计算机设备执行，效果也不相同。
+
+            go 函数()//go关键创建并启动协程，然后执行对应的函数()，该函数执行结束，子协程也随之结束。
+
+                子协程中执行的函数，往往没有返回值。
+                如果有也会被舍弃。
+    */
+
+    //1.先创建并启动子协程
+    go printNum()
+
+    //2.main中打印字母
+    for i := 1; i<=100; i++{
+        fmt.Printf("\t主协程中打印字母：A %d\n",i)
+    }
+
+    time.Sleep(1*time.Second)
+    fmt.Println("main函数结束")
+
+}
+
+func printNum() {
+    for i := 1; i <= 100; i++ {
+        fmt.Printf("子协程中打印数字：%d\n", i)
+    }
+}    
+</pre>
+</div>

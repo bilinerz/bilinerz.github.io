@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>init() 函数</h3>
+    <p>init() 函数会在 main()函数执行前执行，用于初始化包所需的东西</p>
+<pre class="prettyprint linenums">
+    package main
+
+    import "fmt"
+
+    func init() {
+        fmt.Println("这是init()函数")
+    }
+
+    func main() {
+        fmt.Println("这是main()函数")
+    }
+
+    //程序会先执行init()函数中的代码，再执行main()函数中的代码
+</pre>
+</div>

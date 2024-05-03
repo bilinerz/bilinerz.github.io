@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>Go 中有 4 种类型的包</h3>
+    <p>Go 标准包：在 Go 源码目录下，随 Go 一起发布的包。</p>
+    <p>第三方包：第三方提供的包，比如来自于 http://github.com 的包。</p>
+    <p>匿名包：只导入而不使用的包。通常情况下，我们只是想使用导入包产生的副作用，即引用包级别的变量、常量、结构体、接口等，以及执行导入包的init()函数。</p>
+    <p>内部包：项目内部的包，位于项目目录下。</p>
+<pre class="prettyprint linenums">
+import (
+    // Go 标准包
+    "fmt"
+    // 第三方包
+    "github.com/spf13/pflag"
+    // 匿名包
+    _ "github.com/jinzhu/gorm/dialects/mysql"
+    // 内部包
+    "github.com/marmotedu/iam/internal/apiserver"
+)
+</pre>
+    <h3>go module</h3>
+    <p>go module 是Go语言从 1.11 版本之后官方推出的版本管理工具，从 Go1.13 版本开始 go module 成为Go语言默认的依赖管理工具。</p>
+    <p>开启 go module 需设置 GO111MODULE=on</p>
+    <p>go module 的命令</p>
+    <p>get：下载依赖包</p>
+    <p>download：下载依赖包</p>
+    <p>edit：编辑 go.mod</p>
+    <p>graph：打印模块依赖图</p>
+    <p>init：在当前目录初始化mod</p>
+    <p>tidy：拉去缺少的模块，移除不用的模块</p>
+    <p>vendor：将依赖复制到vendor下</p>
+    <p>verify：验证依赖是否正确</p>
+    <p>why：解释为什么需要依赖</p>
+    <br>
+    <p>比较常用的是 get init tidy edit</p>
+    <p>执行 go get 命令下载依赖包</p>
+    <p>go get -u 命令将项目中的包升级到最新的次要版本或修订版本</p>
+    <p>go get -u=patch 命令将项目中的包升级到最新修订版本</p>
+    <p>go get [包名]@[版本号] 命令会下载对应包的指定版本</p>
+    <h3>在项目中使用go module</h3>
+    <p>1、在GOPATH目录下新建一个目录，使用 go mod init 命令初始化生成 go.mod文件</p>
+    <p>2、使用 go get 依赖模块地址 命令下载依赖包之后就额可以在项目中使用。</p>
+    <p>go.mod 提供了4个语句 module、require、replace 和 exclude</p>
+    <p>module：指定包的名字（路径）</p>
+    <p>require：指定依赖的模块</p>
+    <p>replace：可以替换依赖模块</p>
+    <p>exclude：可以忽略依赖的模块</p>
+<pre class="prettyprint linenums">
+
+</pre>
+</div>

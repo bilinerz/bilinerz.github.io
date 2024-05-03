@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+    <h3>time 包</h3>
+    <p>1年=365天(day)</p>
+    <p>1天=24小时(hour)</p>
+    <p>1小时=60分(minute)</p>
+    <p>1分=60秒(second)</p>
+    <p>1秒=1000毫秒(millisecond)</p>
+    <p>1毫秒=1000微秒(microsecond)</p>
+    <p>1微秒=1000纳秒(nanosecond)</p>
+<pre class="prettyprint linenums">
+    //获取当前时间
+    t1 := time.Now()
+    fmt.Println(t1)
+
+    //获取指定时间 (1992年，5月，13日，8点，0分，0秒，0纳秒，当地时区)
+    t2 := time.Date(1992, 5, 13, 8, 0, 0, 0 ,time.Local)
+
+    //格式化当前时间 Format("格式模板")，格式模板的时间是固定的必须是2006年1月2号 15点04分05秒
+    s1 := t1.Format("2006年1月2日 15:04:05")  //返回的是字符串类型的时间
+    fmt.Println(s1)
+
+    //只获取当前年月日
+    s2 := t1.Format("2006/01/02")
+    fmt.Println(s2)
+
+    //将字符串类型的时间转换为time数据类型
+    t3, err := time.Parse("2006年01月02日", "1992年05月13日")
+    fmt.Println(t3)
+
+    //获取当前时间戳（距离1970年1月1日0点0时0分0秒的时间差）
+    t4 := t1.Unix() //精确到秒
+    fmt.Println(t4)
+
+    t5 := t1.UnixNano() //精确到纳秒
+    fmt.Println(t5)
+
+    //延迟
+    time.Sleep(3 *time.Second) //延迟3秒
+    fmt.Println("延迟3秒后")
+</pre>
+</div>

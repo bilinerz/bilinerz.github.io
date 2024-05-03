@@ -17,17 +17,17 @@ func main(){
     //使用 var 关键字，一般用于声明全局变量
     var a string  //声明变量 a 类型为 string
     a = "Hello World!"  //给变量 a 赋值
-    fmt.Println(a)  //打印输出变量a
+    fmt.Println(a)  //打印输出变量a  运行结果为：Hello World!
 
     var b int   //声明变量 b 类型为 int
-    fmt.Println(b)
+    fmt.Println("b = ", b)  //运行结果为 b = 0
 
     var c = 20  //省略后面的数据类型,自动匹配类型
-    fmt.Println(c)
+    fmt.Println(c)  //运行结果为 20
 
     //使用 := 省略了var关键字，:= 左边必须是未声明过的变量，这种不带声明格式的只能在函数体内使用
     d := 1
-    fmt.Printf("d 的类型是%T，d=%d\n", d, d)
+    fmt.Printf("d的数据类型是%T，d=%d\n", d, d)  //运行结果：d的数据类型是int，d=1
 
     //多变量声明
     var e, f = 1, 2

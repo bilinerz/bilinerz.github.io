@@ -1,0 +1,122 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+<h3>Seek 续传</h3>
+<p>从指定位置开始续传</p>
+<h3>简单理解Seek的工作方式</h3>
+<pre class="prettyprint linenums">
+/*
+Seek(offset int64, whence int) (int64, error)
+第一个参数：偏移量
+第二个参数：
+    0：seekstart，表示相对于文件开始
+    1：seekcurrent，表示相对于当前位置的偏移量
+    2：seekend，表示相对于末尾
+*/
+filePath := "/User/a/a.txt"
+file,err := os.OpenFile(filePath, os.O_RDWR, os.ModePerm)
+if err != nil{
+    log.Fatal(err)
+}
+defer file.Close()
+//读写
+bs :=[]byte{0}
+
+//从第4个光标位置开始读取，假设数据是ABCDEF就会从D开始读取数据
+file.Seek(4,io.SeekStart)
+file.Read(bs) //假设数据是ABCDEF，此处读取到E
+fmt.Println(string(bs)) //打印出E
+
+file.Seek(2,0) //第二个参数也可以用0表示，相当于io.SeekStart
+file.Read(bs)
+fmt.Println(string(bs))
+
+file.Seek(2,io.SeekCurrent) //当前光标位置开始
+file.Read(bs)
+fmt.Println(string(bs))
+
+file.Seek(0,io.SeekEnd) //末尾开始
+file.WriteString("ABC") //会在末尾写入ABC
+</pre>
+<h3>图片拷贝续传例子</h3>
+<p>边复制边记录复制的总量在临时文件中，如果中断会先查看临时文件复制了多少再把没复制完的补上</p>
+<pre class="prettyprint linenums">
+srcPath := "/User/a/a.jpg"  //源文件路径
+destPath := srcPath[strings.LastIndex(srcPath,"/")+1:]  //截取源文件名作为目标文件
+tempPath := destPath + ".temp.txt"    //用于记录复制量的临时文件
+
+//只读打开源文件
+srcFile,err := os.Open(srcPath)
+if err != nil{
+    log.Fatal(err)
+}
+//只写模式打开目标文件
+destFile,err := os.OpenFile(destPath,os.O_CREATE|os.O_WRONLY,os.ModePerm)
+if err != nil{
+    log.Fatal(err)
+}
+//读写模式打开临时文件
+tempFile, err := os.OpenFile(tempPath,os.O_CREATE|os.O_RDWR,os.ModePerm)
+if err != nil{
+    log.Fatal(err)
+}
+
+defer srcFile.Close()
+defer destFile.Close()
+
+//在临时文件中写入0
+_, err = tempFile.WriteString("0")
+if err != nil{
+    log.Fatal(err)
+}
+
+//1：先读取临时文件中的数据，以便知道从哪里开始继续
+tempFile.Seek(0,io.SeekStart)
+bs := make([]byte, 100, 100)
+n, err := tempFile.Read(bs)
+if err != nil{
+    log.Fatal(err)
+}
+countStr := string(bs[:n]) //要续传的位置
+//将字符串转换为int64类型以便seek（10进制，最大64位）
+count, err := strconv.ParseInt(countStr,10,64)
+if err != nil{
+    log.Fatal(err)
+}
+
+//2. 根据count的值设置偏移量
+srcFile.Seek(count, 0)
+destFile.Seek(count, 0)
+
+data := make([]byte, 1024, 1024)
+total := int(count) //读取的总量
+
+//3. 复制文件
+for{
+    //读取源文件
+    n, err = srcFile.Read(data)
+    if err == io.EOF || n == 0{
+        fmt.Println("文件复制完成！")
+        tempFile.Close()
+        os.Remove(tempPath)
+        break
+    }
+    //写入目标文件
+    n, err = destFile.Write(data[:n])
+    total += n
+
+    fmt.Println("复制了:", total)
+
+    //将复制的总量存储到临时文件中
+    tempFile.Seek(0, 0)
+    tempFile.WriteString(strconv.Itoa(total))
+
+    //模拟复制中断
+    //if total > 10000 {
+    //	panic("复制中断了...")
+    //}
+}
+</pre>
+</div>

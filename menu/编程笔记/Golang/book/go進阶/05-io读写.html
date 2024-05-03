@@ -1,0 +1,145 @@
+<link rel="stylesheet" href="../../../../../css/prettify.css">
+<link rel="stylesheet" href="../../css/golang.css">
+<script src="../../../../../js/prettify.js"></script>
+<script src="../../js/go.js"></script>
+<div class="book-main">
+<h3>I/O操作</h3>
+<p>i/o操作也叫输入输出操作，I 是输入端(Input)， O 是输出端(Output)，用于读写数据。</p>
+<h3>读取数据</h3>
+<pre class="prettyprint linenums">
+//读取数据，使用Reader接口中的Read
+//读取本地文件中的数据
+//1.打开文件
+file, err := os.Open("user/a/a.txt")
+if err != nil {
+    fmt.Println("打开文件错误：", err)
+    return
+}
+
+//关闭文件
+defer file.Close()
+
+//2.读取数据
+bs := make([]byte, 5) //每次读取5个字节
+for {
+    n, err := file.Read(bs)
+    if n == 0 || err == io.EOF {
+        fmt.Println("数据读取完毕")
+        break
+    }
+    fmt.Println("数据大小:", n)
+    fmt.Println("数据:", string(bs))
+}
+</pre>
+<h3>写入数据</h3>
+<pre class="prettyprint linenums">
+/*
+os.O_CREATE 如果文件不存在则创建一个新文件
+os.O_RDONLY 只读模式
+os.O_WRONLY 只写模式
+os.O_RDWR   读写模式
+os.O_APPEND 在末尾追加
+*/
+file, err := os.OpenFile("user/a/a.txt", os.O_CREATE|os.O_WRONLY, os.ModePerm)
+if err != nil {
+    fmt.Print("打开文件错误：", err)
+    return
+}
+
+defer file.Close()
+
+//写入数据
+bs := []byte{65, 66, 67, 68} //A B C D
+n, err := file.Write(bs)
+if err != nil {
+    fmt.Print("写入数据错误：", err)
+    return
+}
+fmt.Println("写入数据大小：", n)
+
+//字符串方式写入数据
+n, err = file.WriteString("Hello")
+if err != nil {
+    fmt.Print("写入数据错误：", err)
+    return
+}
+fmt.Println("写入数据大小：", n)
+</pre>
+<h3>io.Copy 拷贝数据</h3>
+<pre class="prettyprint linenums">
+//拷贝数据
+func ioCopy(src, dest string) (int64, error) {
+	//打开源文件 src
+	srcFile, err := os.Open(src)
+	if err != nil {
+		return 0, err
+	}
+
+	//打开目标文件 dest
+	destFile, err := os.OpenFile(dest, os.O_CREATE|os.O_WRONLY, os.ModePerm)
+	if err != nil {
+		return 0, err
+	}
+
+	defer srcFile.Close()
+	defer destFile.Close()
+	//返回拷贝结果
+	return io.Copy(destFile, srcFile)
+}
+</pre>
+<h3>用OS包拷贝数据</h3>
+<pre class="prettyprint linenums">
+func osCopy(src, dest string) (int, error) {
+    //打开源文件 src
+    srcFile, err := os.Open(src)
+    if err != nil {
+        return 0, err
+    }
+
+    //打开目标文件 dest
+    destFile, err := os.OpenFile(dest, os.O_CREATE|os.O_WRONLY, os.ModePerm)
+    if err != nil {
+        return 0, err
+    }
+
+    defer srcFile.Close()
+    defer destFile.Close()
+    
+    //读写数据
+    bs := make([]byte, 1024)
+    total := 0
+    for{
+        n, err := srcFile.Read(bs)
+        if err == io.EOF || n == 0 {
+            fmt.Println("数据读取完毕！")
+            break
+        } else if err != nil {
+            fmt.Println("读取数据失败：", err)
+            return 0, err
+        }
+        total += n
+        destFile.Write(bs[:n]) //写入目标
+    }
+    return total, nil
+}
+</pre>
+<h3>一次性将整个数据拷贝</h3>
+<p>这只适合小数据，不适合大文件大数据的拷贝</p>
+<pre class="prettyprint linenums">
+func copy1(src, dest string) (int, error) {
+    //一次性读取全部源数据
+    bs, err := ioutil.ReadFile(src)
+    if err != nil {
+        return 0, err
+    }
+
+    //一次性写入全部数据
+    err = ioutil.WriteFile(dest, bs, 0777)
+    if err != nil {
+        return 0, err
+    }
+
+    return len(bs), nil
+}
+</pre>
+</div>
